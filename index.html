@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Portfolio PM Phuong Ngo</title>
+<meta name="description" content="Portfolio produit et projet de Phuong Ngo : Nghi Lễ Cưới Hỏi, produits internes, cas produit et pilotage de projet.">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+</head>
+<body>
+<style>
+/* Layout: a single Notion-style page; properties, callout, a missions database with three views, and a peek panel for each mission. */
+:root{
+  --bg:#ffffff;
+  --fg:#37352f;
+  --fg-2:#787774;
+  --fg-3:#a5a29a;
+  --line:rgba(55,53,47,.12);
+  --hover:rgba(55,53,47,.06);
+  --soft:#f7f6f3;
+  --cover:#f6e3cf;
+  --link:#2f6fb3;
+  --o-bg:#fbf3db;--o-fg:#9a6b00;
+  --b-bg:#e3eff6;--b-fg:#2c6e98;
+  --p-bg:#efe8f5;--p-fg:#835aa6;
+  --g-bg:#e4efe4;--g-fg:#3f7a5a;
+  --r-bg:#fbe4e4;--r-fg:#c13f3a;
+  --n-bg:#f2ece8;--n-fg:#865f48;--or-bg:#fbecdd;--or-fg:#bf5b06;--pk-bg:#f9e6ef;--pk-fg:#ad3f74;--tq-bg:#ddf1ef;--tq-fg:#1f7a72;
+  --scrim:rgba(15,15,15,.28);
+  --sans:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --serif:Lyon-Text,Georgia,"Times New Roman",serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#191919;--fg:#e6e4df;--fg-2:#a3a19b;--fg-3:#6f6d68;--line:rgba(255,255,255,.1);--hover:rgba(255,255,255,.055);--soft:#232322;--cover:#4a3626;--link:#7fb2e5;
+  --o-bg:#45391a;--o-fg:#e9c46a;--b-bg:#1f3a4d;--b-fg:#8cc2e6;--p-bg:#3b2d4a;--p-fg:#c6a6e3;--g-bg:#233b2e;--g-fg:#8fcba6;--r-bg:#4b2626;--r-fg:#f09a95;--scrim:rgba(0,0,0,.5);--n-bg:#3d3029;--n-fg:#d4b8a2;--or-bg:#4f3523;--or-fg:#f0b27a;--pk-bg:#46283a;--pk-fg:#eba6c8;--tq-bg:#1d3d3a;--tq-fg:#82d2c8;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#191919;--fg:#e6e4df;--fg-2:#a3a19b;--fg-3:#6f6d68;--line:rgba(255,255,255,.1);--hover:rgba(255,255,255,.055);--soft:#232322;--cover:#4a3626;--link:#7fb2e5;
+  --o-bg:#45391a;--o-fg:#e9c46a;--b-bg:#1f3a4d;--b-fg:#8cc2e6;--p-bg:#3b2d4a;--p-fg:#c6a6e3;--g-bg:#233b2e;--g-fg:#8fcba6;--r-bg:#4b2626;--r-fg:#f09a95;--scrim:rgba(0,0,0,.5);--n-bg:#3d3029;--n-fg:#d4b8a2;--or-bg:#4f3523;--or-fg:#f0b27a;--pk-bg:#46283a;--pk-fg:#eba6c8;--tq-bg:#1d3d3a;--tq-fg:#82d2c8;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:underline;text-decoration-color:var(--fg-3);text-underline-offset:2px}
+a:hover{text-decoration-color:var(--fg)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:3px}
+.crumbs{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--fg-2);padding-block:10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.crumbs .sep{color:var(--fg-3)}
+.crumbs .crumb-home{color:inherit;text-decoration:none;border-radius:4px;padding:1px 4px;margin:-1px -4px}
+.crumbs .crumb-home:hover{background:var(--hover);color:var(--fg)}
+.crumbs .sp{flex:1}
+.cover{height:clamp(110px,18vw,190px);background:var(--cover);border-block:1px solid var(--line)}
+.page{max-width:960px;margin:0 auto;padding-block:0 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.narrow{max-width:760px;margin:0 auto}
+.icon{width:104px;height:104px;margin-top:28px;border-radius:8px;background:var(--soft);overflow:hidden;position:relative}
+.icon img{width:100%;height:100%;object-fit:cover;display:block}
+.caret{display:inline-block;width:2px;height:1.05em;background:var(--link);vertical-align:-2px;margin-left:1px;border-radius:1px;animation:blink 1s steps(1) infinite}
+.caret.done{animation:none;opacity:0;transition:opacity .4s}
+@keyframes blink{50%{opacity:0}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cb .line{display:block;font-size:12.5px;color:var(--fg);margin-top:3px;line-height:1.35}
+.pk-in .sub{font-size:16.5px;color:var(--fg-2);margin:-6px 0 14px;text-wrap:balance;min-height:1.5em}
+h1{font-size:clamp(30px,5vw,40px);line-height:1.15;font-weight:700;margin:18px 0 14px;letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:22px;font-weight:650;margin:40px 0 8px;letter-spacing:-.005em;text-wrap:balance}
+h3{font-size:16px;font-weight:600;margin:0}
+h2 .emo{display:inline-block;margin-right:10px;font-size:.95em}
+.props{display:grid;gap:2px;margin-bottom:12px}
+.prop{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px;align-items:start;font-size:14px;padding:4px 6px;border-radius:4px}
+.prop:hover{background:var(--hover)}
+.prop .k{color:var(--fg-2);display:flex;align-items:center;gap:7px}
+.prop .k svg{width:15px;height:15px;flex:none;opacity:.8}
+.prop .v{min-width:0}
+.prop .v .dg{display:block}
+.prop .v .dg+.dg{margin-top:2px}
+.tag{display:inline-block;font-size:12.5px;line-height:1.5;padding:0 6px;border-radius:3px;margin:1px 4px 1px 0;white-space:nowrap;background:var(--soft);color:var(--fg-2)}
+.tag.Attirer{background:var(--o-bg);color:var(--o-fg)}
+.tag.Recruter{background:var(--g-bg);color:var(--g-fg)}
+.tag.Intégrer{background:var(--p-bg);color:var(--p-fg)}
+.tag.Développer{background:var(--b-bg);color:var(--b-fg)}
+.tag.Fidéliser{background:var(--pk-bg);color:var(--pk-fg)}
+.tag.ok{background:var(--b-bg);color:var(--b-fg)}
+.tag.red{background:var(--r-bg);color:var(--r-fg)}
+/* one colour per tool */
+.tag .apps{opacity:.75;margin-left:6px;padding-left:6px;border-left:1px solid currentColor;border-left-color:color-mix(in srgb,currentColor 35%,transparent);white-space:normal}
+.tag .lg.flag{width:17px;height:12px;border-radius:2px;object-fit:cover;vertical-align:-1px;background:none;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+.tag .lg{display:inline-block;flex:none;width:13px;height:13px;vertical-align:-2px;margin-right:5px;border-radius:2px;background:#fff;object-fit:contain}
+.tag.tl-notion{background:var(--n-bg);color:var(--n-fg)}
+.tag.tl-slack{background:var(--p-bg);color:var(--p-fg)}
+.tag.tl-tally{background:var(--pk-bg);color:var(--pk-fg)}
+.tag.tl-google{background:var(--g-bg);color:var(--g-fg)}
+.tag.tl-canva{background:var(--b-bg);color:var(--b-fg)}
+.tag.tl-photoshop{background:var(--or-bg);color:var(--or-fg)}
+.tag.tl-capcut{background:var(--o-bg);color:var(--o-fg)}
+/* the Outils line in the profile stays soft grey */
+.prop:has(use[href="#i-tool"]) .v .tag{background:var(--soft);color:var(--fg-2)}
+.tag.tl-figma{background:var(--p-bg);color:var(--p-fg)}
+.tag.tl-jira{background:var(--r-bg);color:var(--r-fg)}
+.tag.tl-ms{background:var(--tq-bg);color:var(--tq-fg)}
+hr{border:0;border-top:1px solid var(--line);margin:14px 0}
+.callout{display:flex;gap:12px;background:var(--soft);border-radius:6px;padding:16px 18px;font-size:15.5px;line-height:1.6}
+.callout .ci{flex:none;width:22px;height:22px;color:var(--o-fg);margin-top:2px}
+.callout small{display:block;font-size:13.5px;color:var(--fg-2);margin-top:4px}
+.linkbtn{background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-decoration-color:var(--fg-3);text-underline-offset:2px}
+.linkbtn:hover{text-decoration-color:var(--fg)}
+
+/* database */
+.views{display:flex;align-items:center;gap:4px;border-bottom:1px solid var(--line);margin:6px 0 14px;overflow-x:auto;scrollbar-width:none}
+.views button{display:flex;align-items:center;gap:6px;background:none;border:0;border-bottom:2px solid transparent;padding:6px 8px 8px;font-size:14px;color:var(--fg-2);cursor:pointer;white-space:nowrap;margin-bottom:-1px}
+.views button svg{width:15px;height:15px}
+.views button[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--fg)}
+.views button:hover{color:var(--fg)}
+.views .count{margin-left:auto;font-size:13px;color:var(--fg-3);padding-right:4px;white-space:nowrap}
+.board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:start}
+tr.grp{cursor:default}
+.gtog{display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:2px 6px 2px 2px;border-radius:4px;cursor:pointer;font:inherit;color:inherit}
+.gtog:hover{background:var(--hover)}
+.gtog .car{width:0;height:0;border-left:6px solid var(--fg-2);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent;transform:rotate(90deg);transition:transform .15s}
+.gtog .tag{margin:0}
+tbody.shut .gtog .car{transform:none}
+tbody.shut tr[data-id]{display:none}
+.rlink{border:0;cursor:pointer;font:inherit;font-size:12.5px;transition:filter .15s}
+.rlink:hover{filter:brightness(.95);text-decoration:underline;text-underline-offset:2px}
+tr.grp th.flash .tag{outline:2px solid currentColor;outline-offset:2px}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+tr.grp th{padding:18px 10px 6px;border-left:0;background:var(--bg);color:var(--fg-3);font-size:13px}
+tr.grp .n{margin-left:4px}
+tbody:first-of-type tr.grp th{padding-top:10px}
+tbody tr.grp:hover th{background:var(--bg)}
+.col-h{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--fg-3);margin-bottom:8px;padding:0 2px}
+.col{display:flex;flex-direction:column;gap:8px}
+.card{display:block;width:100%;text-align:left;background:var(--bg);border:1px solid var(--line);border-radius:6px;overflow:hidden;cursor:pointer;padding:0;transition:background .12s,border-color .12s}
+.card:hover{background:var(--hover);border-color:var(--fg-3)}
+.thumb{aspect-ratio:12/5;max-width:100%;background:var(--soft);border-bottom:1px solid var(--line);overflow:hidden;position:relative;display:grid;place-items:center;color:var(--fg-2)}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.thumb .big{font-size:26px;font-weight:650;color:var(--fg);letter-spacing:-.01em;font-variant-numeric:tabular-nums;line-height:1}
+.thumb .lbl{font-size:12px;color:var(--fg-2);margin-top:4px;text-align:center;padding:0 10px;line-height:1.3}
+.thumb .stat{text-align:center;padding:6px}
+.thumb .play{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--fg-2);display:grid;place-items:center}
+.thumb .play svg{width:16px;height:16px;margin-left:2px}
+.thumb .nvid{position:absolute;right:6px;bottom:6px;font-size:11.5px;background:var(--bg);border:1px solid var(--line);border-radius:3px;padding:0 5px;color:var(--fg-2)}
+.thumb .web{font-family:var(--serif);font-size:17px;color:var(--fg);text-align:center;line-height:1.3}
+.thumb .web small{display:block;font-family:var(--sans);font-size:11.5px;color:var(--fg-2)}
+.cb{display:block;padding:10px 12px 12px}
+@media (min-width:761px){.board .card{display:flex;flex-direction:column}.board .card .cb{flex:1;display:flex;flex-direction:column}.board .card .r1{margin-top:auto;padding-top:7px}.board .card .tools{margin-bottom:8px}}
+.cb b{display:block;font-size:14px;font-weight:600;line-height:1.3}
+.cb span.d{display:block;font-size:12.5px;color:var(--fg-2);margin-top:2px;line-height:1.35}
+.cb .tags{margin-top:6px}
+.cb .tools{display:flex;flex-wrap:wrap;gap:3px;margin-top:7px}
+.cb .tools .tag{margin:0;font-size:11.5px}
+.cb .r1{display:flex;align-items:flex-start;gap:6px;margin-top:8px;padding-top:7px;border-top:1px dashed var(--line);font-size:12.5px;line-height:1.35;color:var(--fg-2)}
+.cb .r1 svg{width:14px;height:14px;flex:none;margin-top:1px;color:var(--g-fg)}
+.cb .r1 strong{color:var(--fg);font-weight:700;font-variant-numeric:tabular-nums}
+/* unified banners: every card without a photo gets a tinted banner in its stage colour, a type label and a centred visual */
+.thumb.tint{background:var(--soft)}
+.thumb.tint.st-Attirer{background:var(--o-bg);color:var(--o-fg)}
+.thumb.tint.st-Recruter{background:var(--g-bg);color:var(--g-fg)}
+.thumb.tint.st-Intégrer{background:var(--p-bg);color:var(--p-fg)}
+.thumb.tint.st-Développer{background:var(--b-bg);color:var(--b-fg)}
+.thumb.tint.st-Fidéliser{background:var(--pk-bg);color:var(--pk-fg)}
+.thumb.tint .big{color:currentColor;font-size:30px}
+.thumb.tint .lbl{color:currentColor;opacity:.85}
+.thumb.tint .play{border-color:currentColor;background:var(--bg);width:44px;height:44px}
+.thumb.tint .nvid{color:currentColor;border-color:transparent}
+.thumb .kick{position:absolute;left:8px;top:7px;font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;opacity:.8}
+.thumb.tint .web{color:currentColor}
+.browser{width:72%;background:var(--bg);border-radius:5px;box-shadow:0 1px 0 var(--line),0 4px 14px rgba(0,0,0,.08);overflow:hidden;text-align:left}
+.browser .bb{display:flex;gap:3px;padding:5px 6px;border-bottom:1px solid var(--line)}
+.browser .bb i{width:5px;height:5px;border-radius:50%;background:var(--fg-3);opacity:.6}
+.browser .bp{padding:6px 8px 8px;font-family:var(--serif);font-size:13.5px;line-height:1.35;color:var(--fg)}
+.browser .bp small{display:block;font-family:var(--sans);font-size:10.5px;color:var(--fg-2);margin-top:2px}
+.thumb img{transition:transform .25s}
+.card:hover .thumb img{transform:scale(1.03)}
+/* option C banners */
+.thumb.tint{align-content:center;justify-items:center;grid-template-rows:auto auto;gap:6px}
+.thumb .bico{width:30px;height:30px}
+.thumb .blab{font-size:12.5px;font-weight:600;text-align:center;padding:0 8px;line-height:1.3}
+.thumb .pv{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);object-fit:contain;object-position:center;filter:drop-shadow(0 2px 6px rgba(0,0,0,.15));opacity:0;transform:scale(1.04);transition:opacity .25s,transform .3s}
+@media (hover:hover){.card:hover .thumb .pv,.card:focus-visible .thumb .pv{opacity:1;transform:none}}
+.pk-cover .thumb{width:100%;height:100%;border:0}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.tablewrap{overflow-x:auto;border-top:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:680px;font-size:14px}
+th{font-weight:400;color:var(--fg-2);text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th+th,td+td{border-left:1px solid var(--line)}
+tbody tr{cursor:pointer}
+tbody tr:hover td{background:var(--hover)}
+td .t1{font-weight:600}
+td.dim{color:var(--fg-2)}
+td.dim b{color:var(--fg);font-weight:650;font-variant-numeric:tabular-nums}
+td.soft{min-width:150px}
+td.soft .tag{margin:1px 4px 2px 0}
+table{min-width:820px}
+
+/* flagship */
+.flag{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flag .fv{background:var(--soft);display:flex;flex-direction:column;border-right:1px solid var(--line);min-width:0}
+.flag .fv video{flex:none;border-bottom:1px solid var(--line)}
+.site{flex:1;display:flex;flex-direction:column;background:var(--bg)}
+.site .ub{display:flex;align-items:center;gap:8px;padding:7px 10px;border-bottom:1px solid var(--line);background:var(--soft);font-size:12.5px;color:var(--fg-2)}
+.site .ub i{width:8px;height:8px;border-radius:50%;background:var(--fg-3);opacity:.5;flex:none}
+.site .ub .url{flex:1;min-width:0;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:1px 8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.site .ub a{text-decoration:none;white-space:nowrap}
+.site .vp{flex:none;position:relative;overflow-y:auto;overscroll-behavior:contain;aspect-ratio:1100/582}
+.site .vp img{display:block;width:100%;max-width:100%;height:auto}
+.site .hint{position:sticky;bottom:8px;margin:-34px auto 8px;width:fit-content;font-size:12px;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:2px 10px;color:var(--fg-2);pointer-events:none}
+.flag video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;max-width:100%;background:var(--soft)}
+.flag .fb{padding:18px 22px 20px}
+.flag .motto{font-family:var(--serif);font-style:italic;color:var(--r-fg);margin:2px 0 8px}
+.nums{display:flex;flex-wrap:wrap;gap:6px 20px;margin:12px 0;font-size:13px;color:var(--fg-2)}
+.nums b{display:block;font-size:22px;font-weight:650;color:var(--fg);font-variant-numeric:tabular-nums;line-height:1.1}
+.src{font-size:12px;color:var(--fg-3)}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin:14px 0 0;font-size:13px;color:var(--fg-2)}
+.cta{display:inline-flex;align-items:center;gap:7px;background:var(--b-fg);color:var(--bg);text-decoration:none;font-size:14.5px;font-weight:600;padding:9px 16px;border-radius:6px;transition:filter .15s,transform .15s}
+.cta:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.cta svg{width:15px;height:15px}
+.bm{display:flex;align-items:stretch;margin-top:24px;border:1px solid var(--line);border-radius:6px;overflow:hidden;text-decoration:none;color:inherit;background:var(--bg);transition:background .15s}
+.bm:hover{background:var(--hover)}
+.bm-txt{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;padding:14px 16px}
+.bm-t{font-size:15px;font-weight:500;color:var(--fg)}
+.bm-d{font-size:13px;color:var(--fg-2);margin-top:3px;line-height:1.4}
+.bm-u{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--fg);margin-top:10px}
+.bm-u img{width:16px;height:16px;border-radius:50%;box-shadow:0 0 0 1px var(--line)}
+.bm-u svg{width:12px;height:12px;color:var(--fg-3)}
+.bm-img{flex:none;width:clamp(120px,30%,240px);display:grid;place-items:center;background:var(--soft);border-left:1px solid var(--line)}
+.bm-img img{width:84px;height:84px;border-radius:50%;background:#fff;box-shadow:0 0 0 1px var(--line);transition:transform .25s}
+.bm:hover .bm-img img{transform:scale(1.05)}
+@media (max-width:560px){.bm-img{width:96px}.bm-img img{width:60px;height:60px}}
+.fdet{margin-top:16px;padding-top:10px;border-top:1px solid var(--line)}
+.fdet details.tg{margin-top:2px;font-size:14px}
+.fdet details.tg>summary{font-size:14.5px;font-weight:500}
+.fdet details.tg>.tb{padding:4px 0 8px 18px}
+.fdet .steps li{grid-template-columns:1fr;gap:0}
+.fdet .feat{grid-template-columns:1fr 1fr}
+
+/* toggles */
+details.tg{margin-top:6px}
+details.tg>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;padding:4px 4px;border-radius:4px;font-size:15px;width:fit-content;max-width:100%}
+details.tg>summary::-webkit-details-marker{display:none}
+details.tg>summary:hover{background:var(--hover)}
+details.tg>summary::before{content:"";flex:none;width:0;height:0;border-left:6px solid var(--fg-2);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent;transition:transform .15s}
+details.tg[open]>summary::before{transform:rotate(90deg)}
+details.tg>.tb{padding:6px 0 4px 22px}
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.steps li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:10px;font-size:14px}
+.steps li b{font-weight:600}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin-top:10px}
+.feat div{background:var(--soft);border-radius:4px;padding:10px 12px;font-size:13.5px;line-height:1.45}
+.feat b{display:block;font-weight:600;font-size:14px}
+.charte{display:block;width:100%;max-width:100%;border:1px solid var(--line);border-radius:4px;margin-top:8px}
+
+/* cv */
+.two{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:36px}
+.row{display:grid;grid-template-columns:96px minmax(0,1fr);gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:14.5px;line-height:1.4}
+.row .y{color:var(--fg-2);font-size:13px;font-variant-numeric:tabular-nums;padding-top:1px}
+.row a.co{text-decoration:none;color:inherit;background-image:linear-gradient(currentColor,currentColor);background-size:0 1px;background-position:0 100%;background-repeat:no-repeat;transition:background-size .2s}
+.row a.co::after{content:" ↗";font-size:.8em;color:var(--fg-3)}
+.row a.co:hover{background-size:100% 1px}
+.row .rtags{display:flex;flex-wrap:wrap;gap:3px;margin-top:4px}
+.row .rtags .tag{margin:0;font-size:11.5px}
+.row small{display:block;color:var(--fg-2);font-size:13px}
+.pubs{margin-top:10px;display:grid;gap:10px}
+.pub{border-left:2px solid var(--line);padding:2px 0 2px 12px;font-size:13.5px;line-height:1.45}
+.pub em{display:block;color:var(--fg-2);font-size:12.5px}
+
+
+.tag.Produit{background:var(--b-bg);color:var(--b-fg)}
+.tag.Strategie{background:var(--p-bg);color:var(--p-fg)}
+.tag.Projet{background:var(--or-bg);color:var(--or-fg)}
+.thumb.tint.st-Produit{background:var(--b-bg);color:var(--b-fg)}
+.thumb.tint.st-Strategie{background:var(--p-bg);color:var(--p-fg)}
+.thumb.tint.st-Projet{background:var(--or-bg);color:var(--or-fg)}
+.steps li b .pmk{display:block;font-weight:500;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--fg-2);margin-top:1px}
+.fdet .steps li b .pmk{display:inline;margin-left:8px}
+.fdet details.tg.hl{margin:6px 0}
+.tag.yl{background:var(--o-bg);color:var(--o-fg)}
+.fdet details.tg.hl>summary{background:var(--b-bg);color:var(--b-fg);font-weight:600;padding:6px 12px 6px 10px;border-radius:5px;transition:filter .15s}
+.fdet details.tg.hl>summary:hover{background:var(--b-bg);filter:brightness(.96)}
+.fdet details.tg.hl>summary::before{border-left-color:currentColor}
+.fdet details.tg.hl[open]>.tb{border-left:2px solid var(--b-bg);margin:6px 0 0 6px;padding-left:14px}
+.prop .mnote{display:inline-block;font-size:12px;color:var(--fg-3);margin-left:2px;white-space:nowrap}
+.bridge{margin:36px 0 0;padding:12px 16px;border-left:3px solid var(--b-fg);background:var(--b-bg);border-radius:0 6px 6px 0;font-size:15px;line-height:1.5;color:var(--fg)}
+.bridge+h2{margin-top:22px}
+.steps li.dd{display:block;font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--b-fg);margin-top:8px;padding-bottom:2px;border-bottom:1px solid var(--line)}
+.steps li.dd:first-child{margin-top:0}
+td.role{min-width:220px;font-size:13.5px}
+.thumb .kick{z-index:1}
+.tid{font-family:var(--mono);font-weight:600;font-size:11px;background:var(--bg);color:var(--fg);padding:1px 6px;border-radius:3px;letter-spacing:0;text-transform:none}
+.thumb .kick.tid{opacity:1}
+.tst{font-size:11px;font-weight:600;background:var(--g-fg);color:var(--bg);padding:1px 7px;border-radius:3px;white-space:nowrap}
+.thumb .tst{position:absolute;right:8px;top:7px;z-index:1}
+.col-h .ep{font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-3)}
+.pk-tk{display:flex;align-items:center;gap:8px;margin-top:4px}
+.pk-tk .tid{border:1px solid var(--line);font-size:12px}
+td.mono{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
+@media (max-width:760px){.board .card .thumb .tst{display:none}}
+.col.flash .col-h .tag{outline:2px solid currentColor;outline-offset:2px}
+.col{scroll-margin-top:12px}
+.col-h .cnote{font-size:12px;color:var(--fg-3);margin-left:auto;padding-right:2px}
+/* every epic header has the same two-line height: label row, then the note on its own line */
+.board .col-h{flex-wrap:wrap;row-gap:2px}
+.board .col-h>*:not(.cnote){white-space:nowrap}
+.board .col-h .cnote{flex-basis:100%;margin-left:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* onboarding + contact */
+#onb{margin:0;flex:1;min-width:0}
+#onb>summary{flex-wrap:wrap;row-gap:2px}
+.onb-row{display:flex;align-items:flex-start;gap:12px;background:var(--b-bg);border-radius:6px;padding:14px 16px;margin:6px 0 18px}
+/* on hover only: the box lifts with a soft blue halo and the portrait waves */
+.onb-row{transition:box-shadow .25s,transform .25s}
+.onb-face{transform-origin:50% 90%}
+.onb-row:hover{transform:translateY(-2px);box-shadow:0 0 0 5px color-mix(in srgb,var(--b-fg) 20%,transparent),0 6px 16px rgba(0,0,0,.06)}
+.onb-row:hover .onb-face{animation:onbWave .9s ease-in-out}
+@keyframes onbWave{0%,100%{transform:rotate(0)}20%{transform:rotate(-12deg)}40%{transform:rotate(10deg)}60%{transform:rotate(-6deg)}80%{transform:rotate(3deg)}}
+@media (prefers-reduced-motion:reduce){.onb-row,.onb-face,.onb-row:hover .onb-face{animation:none;transition:none}.onb-row:hover{transform:none}}
+.onb-face{flex:none;width:42px;height:42px;margin-top:-2px;border-radius:50%;background:#fff;padding:2px;object-fit:contain;box-shadow:0 0 0 1px var(--line)}
+@media (max-width:560px){.onb-row{padding:12px 12px}.onb-face{width:30px;height:30px}}
+#onb .sub{flex-basis:100%;padding-left:12px;font-size:14px;color:var(--fg-2)}
+#onb .sub.ask{margin-top:2px;font-size:13.5px}
+#onb .sub.ask a{color:var(--b-fg);font-weight:600}
+#onb .prog{font-size:12.5px;color:var(--fg-3);margin-left:4px}
+/* desktop only: once the visitor scrolls past the onboarding box, a floating copy with the portrait appears on the right */
+@media (min-width:1400px) and (hover:hover){
+  #onbf,html.onb-float #onbf{display:block;animation:onbfIn .35s cubic-bezier(.2,.7,.2,1)}
+  .onb-row{display:none}
+}
+@keyframes onbfIn{from{opacity:0;transform:translate(12px,-50%)}to{opacity:1;transform:translate(0,-50%)}}
+#onbf{display:none;position:fixed;right:max(12px,env(safe-area-inset-right,0px));top:50%;transform:translateY(-50%);width:200px;z-index:15;background:var(--bg);border:2px solid var(--fg);border-radius:12px;box-shadow:3px 3px 0 var(--fg);padding:12px 10px 6px}
+#onbf .hd{display:flex;align-items:center;gap:8px;padding:0 2px 6px;margin-bottom:2px;border-bottom:1px dashed var(--line)}
+#onbf .fface{flex:none;width:46px;height:46px;border-radius:50%;background:#fff;padding:2px;object-fit:contain;box-shadow:0 0 0 1.5px var(--fg)}
+#onbf .fbub{position:relative;flex:1;min-width:0;background:var(--b-bg);color:var(--fg);border-radius:10px;padding:5px 8px;font-size:12.5px;font-weight:700;line-height:1.3}
+#onbf .fbub::before{content:"";position:absolute;left:-7px;top:50%;margin-top:-6px;border-width:6px 8px 6px 0;border-style:solid;border-color:transparent var(--b-bg) transparent transparent}
+#onbf .fbub span{display:block;color:var(--fg-2);font-weight:500;font-size:11.5px}
+@media (prefers-reduced-motion:reduce){html.onb-float #onbf{animation:none}}
+#onbf .fint{margin:6px 2px 4px;font-size:12px;line-height:1.4;color:var(--fg-2)}
+#onbf .todo li{padding:5px 2px;font-size:13.5px;flex-wrap:wrap;gap:4px 8px}
+#onbf .todo .dur,#onbf .todo .hn{display:none}
+@media print{#onbf{display:none}}
+.todo{list-style:none;padding:0;margin:0}
+.todo li{display:flex;align-items:flex-start;gap:10px;padding:6px 4px;border-radius:4px}
+.todo li:hover{background:var(--hover)}
+.todo input{appearance:none;-webkit-appearance:none;width:16px;height:16px;border:1.5px solid var(--fg-2);border-radius:3px;margin:3px 0 0;flex:none;cursor:pointer;display:grid;place-items:center}
+.todo input:checked{background:var(--link);border-color:var(--link)}
+.todo input:checked::after{content:"";width:8px;height:4px;border-left:2px solid var(--bg);border-bottom:2px solid var(--bg);transform:rotate(-45deg) translate(1px,-1px)}
+.todo label{cursor:pointer;flex:1;min-width:0}
+.todo input:checked+label .tt,.todo input:checked+.tgo .tt{text-decoration:line-through;color:var(--fg-3)}
+.todo .tgo{flex:1;min-width:0;background:none;border:0;padding:0;margin:0;text-align:left;cursor:pointer;font:inherit;color:inherit}
+.todo .tgo .tt{text-decoration:underline;text-decoration-color:transparent;text-underline-offset:3px;transition:text-decoration-color .15s}
+.todo .tgo:hover .tt{text-decoration-color:var(--fg-3)}
+.todo .tgo .tt::after{content:" →";color:var(--fg-3);opacity:0;transition:opacity .15s}
+.todo .tgo:hover .tt::after{opacity:1}
+.todo .dur{color:var(--fg-3);font-size:13px;margin-left:6px;white-space:nowrap}
+.todo .hn{display:block;font-size:12.5px;color:var(--fg-2);margin-top:1px}
+.todo .go:not(.tgo){font-size:13px;color:var(--fg-2)}
+.contact{display:grid;gap:6px;margin-top:6px}
+.contact .ln{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:14.5px;padding:6px 4px}
+.contact .ln .k{color:var(--fg-2);width:120px;display:flex;align-items:center;gap:7px;flex:none}
+.contact .ln .k svg{width:15px;height:15px;flex:none;opacity:.8}
+/* Notion-style "blue background" block */
+.contact .ln.hl{background:var(--b-bg);border-radius:4px;padding:6px 8px}
+.contact .ln.hl .k{color:var(--b-fg)}
+.contact .ln.hl a.v{color:var(--b-fg);font-weight:500;text-decoration-color:color-mix(in srgb,var(--b-fg) 40%,transparent)}
+.contact .ln .v{user-select:all;min-width:0;overflow-wrap:anywhere}
+.copy{border:1px solid var(--line);background:var(--bg);border-radius:4px;padding:1px 8px;font-size:12.5px;cursor:pointer;color:var(--fg-2)}
+.copy:hover{background:var(--hover);color:var(--fg)}
+
+/* peek panel */
+.scrim{position:fixed;inset:0;background:var(--scrim);z-index:20;opacity:0;transition:opacity .18s}
+.scrim.on{opacity:1}
+.peek{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:var(--bg);border-left:1px solid var(--line);z-index:21;overflow-y:auto;overscroll-behavior:contain;transform:translateX(100%);transition:transform .22s cubic-bezier(.2,.7,.2,1);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-right:env(safe-area-inset-right,0px)}
+.peek.on{transform:none}
+.peek .bar{position:sticky;top:0;background:var(--bg);display:flex;align-items:center;gap:8px;padding:8px 14px;font-size:13px;color:var(--fg-2);z-index:2;border-bottom:1px solid var(--line)}
+.peek .bar .sp{flex:1}
+.ib{background:none;border:0;border-radius:4px;width:30px;height:30px;display:grid;place-items:center;cursor:pointer;color:var(--fg-2)}
+.ib:hover{background:var(--hover);color:var(--fg)}
+.ib svg{width:18px;height:18px}
+.pk-in{padding:18px 26px 40px}
+.pk-in h3.ph{font-size:28px;font-weight:700;line-height:1.2;margin:14px 0 12px;text-wrap:balance}
+.pk-cover{aspect-ratio:16/8;max-width:100%;background:var(--soft);border-radius:4px;overflow:hidden;display:grid;place-items:center;border:1px solid var(--line)}
+.pk-cover img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.pk-cover.vid{aspect-ratio:16/9;background:#000}
+.pk-photo{display:block;width:100%;max-width:100%;height:auto;border:1px solid var(--line);border-radius:4px}
+.pk-in h3.ph:first-child{margin-top:4px}
+.pk-cover video{display:block;width:100%;height:100%;object-fit:contain}
+.pk-cover iframe{display:block;width:100%;height:100%;border:0}
+.yt{display:grid;gap:12px}
+.yt figure{margin:0}
+.yt iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:4px;background:#000}
+.yt figcaption{font-size:13px;color:var(--fg-2);margin-top:4px}
+.pk-sec{margin-top:22px}
+.pk-sec h4{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--fg-2);margin:0 0 8px}
+.pk-sec p{margin:0 0 8px}
+.pk-sec ul{margin:0;padding-left:20px;display:grid;gap:5px}
+.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.res div{background:var(--soft);border-radius:4px;padding:10px 12px;font-size:13px;color:var(--fg-2);line-height:1.4}
+.res b{display:block;font-size:22px;color:var(--fg);font-weight:650;font-variant-numeric:tabular-nums;line-height:1.15;margin-bottom:2px}
+.part{border:1px solid var(--line);border-radius:6px;margin-top:8px}
+.part>summary{list-style:none;cursor:pointer;display:flex;gap:10px;align-items:center;padding:10px 12px}
+.part>summary::-webkit-details-marker{display:none}
+.part>summary:hover{background:var(--hover)}
+.part>summary .pt{flex:1;min-width:0}
+.part>summary .pt b{display:block;font-weight:600;font-size:14px}
+.part>summary .pt small{display:block;color:var(--fg-2);font-size:12.5px;line-height:1.35}
+.part .pb{padding:0 12px 12px}
+.part video{display:block;width:100%;max-width:100%;aspect-ratio:16/9;background:var(--soft);border-radius:4px;border:1px solid var(--line)}
+.pages{display:flex;gap:8px;overflow-x:auto;padding:8px 0 2px}
+.pages img{height:220px;width:auto;max-width:none;border:1px solid var(--line);border-radius:3px;background:#fff;cursor:zoom-in;transition:transform .15s,box-shadow .15s}
+.pages img:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.12)}
+/* guides rendered as page content */
+.gd{margin-top:12px;font-size:14px;line-height:1.55}
+.gd>*+*{margin-top:10px}
+.gd p{margin:0}
+.gd .gcr{font-size:12px;color:var(--fg-3)}
+.gd .gcr span{margin:0 2px}
+.gd h5{font-size:15px;font-weight:650;margin:22px 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:6px;color:var(--fg)}
+.gd h5 .who{font-size:11.5px;font-weight:500;padding:0 6px;border-radius:3px;background:var(--soft);color:var(--fg-2)}
+.gd figure{margin:10px 0 0}
+.gd figure img{display:block;width:100%;max-width:100%;height:auto;border:1px solid var(--line);border-radius:4px;background:#fff;cursor:zoom-in}
+.gd figcaption{font-size:12.5px;color:var(--fg-2);margin-top:5px;line-height:1.4}
+.gd .gs{margin:0;padding-left:22px;display:grid;gap:8px}
+.gd .gs li::marker{color:var(--fg-2);font-variant-numeric:tabular-nums}
+.gd .gl{margin:0;padding-left:20px;display:grid;gap:6px}
+.gd .gtw{overflow-x:auto;border:1px solid var(--line);border-radius:4px}
+.gd .gt{min-width:0;width:100%;border-collapse:collapse;font-size:13px}
+.gd .gt th{background:var(--soft);font-weight:600;color:var(--fg-2);white-space:normal}
+.gd .gt th,.gd .gt td{padding:7px 9px;vertical-align:top;border-bottom:1px solid var(--line);text-align:left}
+.gd .gt tr:last-child td{border-bottom:0}
+.gd .gt tbody tr{cursor:default}
+.gd .gt tbody tr:hover td{background:none}
+.gd .gt td:first-child{font-weight:600}
+.gd .gflow{display:flex;flex-wrap:wrap;gap:6px}
+.gd .gflow div{flex:1 1 120px;background:var(--soft);border-radius:4px;padding:8px 10px;font-size:12.5px;line-height:1.4;position:relative}
+.gd .gflow b{display:block;font-size:12.5px;font-weight:650;margin-bottom:2px}
+.gd .gflow span{color:var(--fg-2)}
+.gd .gnote{background:var(--r-bg);color:var(--fg);border-radius:4px;padding:10px 12px;font-size:13.5px}
+.gd .g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.gd .g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.gd .g2 figure,.gd .g3 figure{margin:0}
+@media (max-width:560px){.gd .g2,.gd .g3{grid-template-columns:1fr}}
+/* lightbox for guide pages */
+.lb{position:fixed;inset:0;z-index:40;background:rgba(15,15,15,.82);display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(56px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(56px,env(safe-area-inset-left,0px))}
+.lb[hidden]{display:none}
+.lb img{max-width:100%;max-height:100%;width:auto;height:auto;border-radius:4px;background:#fff;box-shadow:0 10px 40px rgba(0,0,0,.4);cursor:zoom-out}
+.lb button{position:absolute;background:rgba(255,255,255,.12);border:0;color:#fff;width:40px;height:40px;border-radius:50%;font-size:20px;cursor:pointer;display:grid;place-items:center}
+.lb button:hover{background:rgba(255,255,255,.25)}
+.lb .lx{top:max(14px,env(safe-area-inset-top,0px));right:max(14px,env(safe-area-inset-right,0px))}
+.lb .lp{left:max(10px,env(safe-area-inset-left,0px))}
+.lb .ln2{right:max(10px,env(safe-area-inset-right,0px))}
+.lb .lc{position:absolute;bottom:max(14px,env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;color:#fff;font-size:13px;opacity:.85}
+@media (max-width:560px){.lb{padding-left:12px;padding-right:12px}.lb .lp,.lb .ln2{top:auto;bottom:max(10px,env(safe-area-inset-bottom,0px))}}
+.vids{display:grid;gap:6px}
+.vids a{display:flex;align-items:center;gap:10px;padding:8px 10px;border:1px solid var(--line);border-radius:4px;text-decoration:none;font-size:14px}
+.vids a:hover{background:var(--hover)}
+.vids a svg{width:16px;height:16px;flex:none;color:var(--fg-2)}
+.vids a span{flex:1}
+.vids a em{font-style:normal;color:var(--fg-3);font-size:12.5px}
+
+@media (max-width:760px){
+  .board{grid-template-columns:1fr;gap:18px}
+  .board .card{display:grid;grid-template-columns:96px minmax(0,1fr);align-items:stretch}
+  .board .card .thumb{aspect-ratio:auto;height:100%;min-height:66px;border-bottom:0;border-right:1px solid var(--line)}
+  .board .card .thumb .big{font-size:18px}
+  .board .card .thumb .lbl{display:none}
+  .board .card .thumb .play{width:28px;height:28px}
+  .board .card .thumb .blab{display:none}
+  .board .card .thumb .bico{width:26px;height:26px}
+  .board .card .thumb .kick,.board .card .thumb .nvid{display:none}
+  .board .card .browser{width:84%}
+  .board .card .browser .bp{font-size:10px;padding:4px 5px}
+  .board .card .browser .bp small{display:none}
+  .flag{grid-template-columns:1fr}
+  .flag .fv{border-right:0;border-bottom:1px solid var(--line)}
+  .two{grid-template-columns:1fr;gap:4px}
+  .prop{grid-template-columns:112px minmax(0,1fr)}
+  .steps li{grid-template-columns:1fr;gap:0}
+  .pk-in{padding:16px max(18px,env(safe-area-inset-left,0px)) 40px 18px}
+  .pk-in h3.ph{font-size:24px}
+  .icon{width:80px;height:80px;margin-top:16px}
+  .crumbs .hide-s{display:none}
+}
+@media (prefers-reduced-motion:reduce){.thumb .pv,.peek,.scrim,.card,details.tg>summary::before{transition:none}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></symbol>
+ <symbol id="i-dot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/></symbol>
+ <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/></symbol>
+ <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></symbol>
+ <symbol id="i-lang" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 5h9M8.5 3v2M6 5c.5 3 2.5 6 6 8M11 5c-.5 3-2.5 6-6 8"/><path d="M13 21l4-9 4 9M14.5 18h5"/></symbol>
+ <symbol id="i-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M14 6a4 4 0 0 0 5 5l-8 8a2 2 0 0 1-3-3z"/><path d="M14 6l3-3 4 4-3 3"/></symbol>
+ <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+ <symbol id="i-board" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="5" height="16" rx="1"/><rect x="10" y="4" width="5" height="10" rx="1"/><rect x="17" y="4" width="4" height="13" rx="1"/></symbol>
+ <symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></symbol>
+ <symbol id="i-table" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 9h18M3 14.5h18M9 9v11"/></symbol>
+ <symbol id="i-bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol>
+ <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></symbol>
+ <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+ <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+ <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 21l5-3 5 3-1.5-7"/></symbol>
+ <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+ <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></symbol>
+ <symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6 16c.8-1.5 1.8-2 3-2s2.2.5 3 2M14.5 10h4M14.5 13.5h3"/></symbol>
+ <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+ <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+ <symbol id="b-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></symbol>
+ <symbol id="b-mega" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M3 10v4h4l7 4V6L7 10z"/><path d="M17.5 9a4 4 0 0 1 0 6M7 14l1.5 5h3L10 15"/></symbol>
+ <symbol id="b-film" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></symbol>
+ <symbol id="b-flow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="3" y="4" width="7" height="5" rx="1"/><rect x="14" y="15" width="7" height="5" rx="1"/><path d="M6.5 9v4.5h11V15"/></symbol>
+ <symbol id="b-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></symbol>
+ <symbol id="b-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M17.5 14v7M14 17.5h7"/></symbol>
+ <symbol id="b-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3 7l9 6 9-6"/></symbol>
+ <symbol id="b-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7M8 10.5h5"/></symbol>
+ <symbol id="b-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 13h18M12 9v12M12 9c-2-4-6-4-6-1.5S10 9 12 9c2 0 6-.5 6-1.5S14 5 12 9"/></symbol>
+</svg>
+
+<nav class="crumbs" aria-label="Fil d'Ariane"><a class="crumb-home" href="https://phuongngo.netlify.app/" target="_blank" rel="noopener">Phuong Ngo</a><span class="sep">/</span><span>Portfolio produit et projet</span><span class="sp"></span><span class="hide-s">Disponible en septembre 2027</span></nav>
+
+<main class="page">
+ <div class="narrow">
+  <div class="icon"><img src="profil-3.jpg" alt="Phuong Ngo"></div>
+  <h1>Phuong Ngo</h1>
+  <div class="props">
+   <div class="prop"><span class="k"><svg><use href="#i-board"/></svg>Epic</span><span class="v"><button type="button" class="tag rlink Produit" data-cat="Produit">Produits internes →</button><button type="button" class="tag rlink Strategie" data-cat="Strategie">Cas produit et stratégie →</button><button type="button" class="tag rlink Projet" data-cat="Projet">Pilotage de projet →</button></span></div>
+   <div class="prop"><span class="k"><svg><use href="#i-dot"/></svg>Disponible</span><span class="v"><span class="tag ok">Septembre 2027</span></span></div>
+   <div class="prop"><span class="k"><svg><use href="#i-cap"/></svg>Formation</span><span class="v"><span class="dg">Master en communication digitale, L'Institut Supérieur des Arts Appliqués</span><span class="dg">MBA in International Management, IAE France</span><span class="dg">Licence en gestion de projet, National Economics University</span></span></div>
+   <div class="prop"><span class="k"><svg><use href="#i-bag"/></svg>Expérience</span><span class="v">3 ans à temps plein, 7 ans au total · France et Vietnam</span></div>
+   <div class="prop"><span class="k"><svg><use href="#i-lang"/></svg>Langues</span><span class="v"><span class="tag tl-canva" data-t="Français">Français<span class="apps">B2, avancé</span></span><span class="tag tl-google" data-t="Anglais">Anglais<span class="apps">Niveau natif</span></span><span class="tag red" data-t="Vietnamien">Vietnamien<span class="apps">Niveau natif</span></span></span></div>
+   <div class="prop"><span class="k"><svg><use href="#i-tool"/></svg>Outils</span><span class="v"><span class="tag tl-jira">Jira</span><span class="tag tl-notion">Notion</span><span class="tag tl-figma" data-t="Figma">Figma</span><span class="tag tl-canva">Canva</span><span class="tag tl-slack">Slack Workflow</span><span class="tag tl-tally">Tally</span><span class="tag tl-google" data-t="Google Workspace">Google Workspace<span class="apps">Docs, Sheets, Slides, Forms, Drive</span></span><span class="tag tl-ms" data-t="Microsoft 365">Microsoft 365<span class="apps">Word, Excel, PowerPoint, Outlook, Teams</span></span></span></div>
+   <div class="prop"><span class="k"><svg><use href="#i-chat"/></svg>Contact</span><span class="v"><a href="https://calendar.app.google/PbR8fZyYBmeqijxz7" target="_blank" rel="noopener">Planifier un échange</a></span></div>
+  </div>
+  <div class="callout">
+   <svg class="ci" aria-hidden="true"><use href="#i-bulb"/></svg>
+   <div><span id="pitch" aria-hidden="true">Je transforme des besoins flous en produits que les équipes adoptent, de la recherche utilisateur à la mesure des résultats.</span><span class="caret done" id="pitch-c" aria-hidden="true"></span><span class="sr">Je transforme des besoins flous en produits que les équipes adoptent, de la recherche utilisateur à la mesure des résultats.</span>
+    <small>Projet phare : <a href="#projet-phare">Nghi Lễ Cưới Hỏi</a>, un produit conçu de zéro.</small></div>
+  </div>
+  <div class="onb-row">
+  <img class="onb-face" src="moi-bd.png" alt="Portrait dessiné de Phuong" width="42" height="42">
+  <details class="tg" id="onb">
+   <summary><span class="st">Vous avez 4 minutes ? Suivez le parcours</span><span class="prog" id="onb-prog"></span><span class="sub">Je conçois des parcours utilisateur. Celui-ci vous fait découvrir mon travail en quatre minutes.</span></summary>
+   <div class="tb">
+    <ul class="todo" id="todo"></ul>
+   </div>
+  </details>
+  </div>
+ </div>
+
+ <section aria-labelledby="projet-phare">
+  <h2 id="projet-phare"><span class="emo" aria-hidden="true">💍</span>Projet phare</h2>
+  <div class="flag">
+   <div class="fv"><video src="nghile/intro.mp4" poster="nghile/intro-poster.jpg" controls playsinline preload="none" aria-label="Film d'introduction de Nghi Lễ Cưới Hỏi, 14 secondes"></video>
+    <div class="site"><div class="ub"><i></i><i></i><i></i><span class="url">nghilecuoihoi.netlify.app</span><a href="https://nghilecuoihoi.netlify.app/" target="_blank" rel="noopener">Ouvrir ↗</a></div>
+     <div class="vp" tabindex="0" aria-label="Aperçu de la page d'accueil du site, à faire défiler"><a href="https://nghilecuoihoi.netlify.app/" target="_blank" rel="noopener"><img src="nghile/site.jpg" alt="Page d'accueil du site Nghi Lễ Cưới Hỏi : les six rites du mariage, puis le détail du Dạm ngõ" loading="lazy"></a><div class="hint">Faites défiler le site</div></div></div>
+   </div>
+   <div class="fb">
+    <span class="tag ok">Conçu de zéro · août à octobre 2026</span>
+    <h3 style="font-size:21px;margin-top:8px">Nghi Lễ Cưới Hỏi</h3>
+    <p style="margin:0;font-size:14.5px">Un produit numérique bilingue qui aide les jeunes Vietnamiens et leurs parents à comprendre les rites du mariage, puis à décider ensemble, rite par rite, ce qu'ils gardent, adaptent ou laissent de côté.</p>
+    <div class="nums">
+     <span><b>867</b>pages vues</span><span><b>384</b>visiteurs uniques</span><span><b>253</b>visites via Threads</span>
+    </div>
+    <div class="src">Premières 24 h en ligne, Analytics Netlify</div>
+    <p class="cta-row"><a class="cta" href="https://nghilecuoihoi.netlify.app/" target="_blank" rel="noopener">Voir le site en ligne <svg aria-hidden="true"><use href="#i-ext"/></svg></a><span>en vietnamien et en français</span></p>
+    <div class="fdet">
+    <details class="tg">
+     <summary>Le problème</summary>
+     <div class="tb"><p style="margin:0">Un mariage vietnamien se décide à deux générations. Combien de tráp ? Le sính lễ reste-t-il une négociation ? Les jeunes n'ont aucune source fiable pour comprendre les rites qu'on leur demande pourtant de trancher.</p></div>
+    </details>
+    <details class="tg hl">
+     <summary>Les 8 étapes, selon la méthode Double Diamond</summary>
+     <div class="tb">
+      <ol class="steps">
+       <li class="dd">Découvrir</li>
+      <li><b>Documenter<span class="pmk">Veille</span></b><span>Un rapport de veille : les rites, leurs variantes par région et religion, jusqu'au code Hồng Đức de 1470.</span></li>
+       <li><b>Écouter<span class="pmk">Recherche utilisateur</span></b><span>Une enquête bilingue en six axes. 9 répondants sur 15 vivent un désaccord familial concret.</span></li>
+       <li><b>Comparer<span class="pmk">Benchmark</span></b><span>Un benchmark : The Knot, Zola, Marry.vn, réseaux sociaux, wedding planners. Personne ne relie le sens des rites à la décision en famille.</span></li>
+       <li class="dd">Définir</li>
+      <li><b>Pivoter<span class="pmk">Repositionnement</span></b><span>D'objets de déco vers un outil : « Découvrir » pour comprendre, « Décider ensemble » pour trancher.</span></li>
+       <li><b>Nommer<span class="pmk">Naming</span></b><span>« Nghi lễ cưới hỏi », c'est ce que les gens tapent sur Google. Et « hỏi » veut aussi dire « demander ».</span></li>
+       <li class="dd">Développer</li>
+      <li><b>Construire<span class="pmk">MVP</span></b><span>Le site : six rites, trois régions, trois traditions religieuses, un lexique, un questionnaire de 7 minutes.</span></li>
+       <li class="dd">Livrer</li>
+      <li><b>Lancer<span class="pmk">Go-to-market</span></b><span>Mise en ligne sur Netlify, référencement, puis appel aux retours de la communauté.</span></li>
+       <li><b>Défendre<span class="pmk">Restitution</span></b><span>Le rapport de veille en slides, avec mes notes de présentation, pour le rendu du 23 octobre.</span></li>
+      </ol>
+     </div>
+    </details>
+    <details class="tg">
+     <summary>Le produit</summary>
+     <div class="tb">
+      <div class="feat">
+       <div><b>Découvrir</b>Chaque rite, du Dạm ngõ au Lại mặt, expliqué selon la région et la religion de chaque famille.</div>
+       <div><b>Décider ensemble</b>Chacun remplit le même questionnaire, reçoit un code et l'envoie à l'autre famille sur Zalo.</div>
+       <div><b>Comparer</b>Les deux codes côte à côte montrent ce qui est d'accord et ce qui reste à rediscuter.</div>
+       <div><b>Wedding Outline</b>Le plan commun, imprimable, qui peut servir de brief au wedding planner.</div>
+      </div>
+     </div>
+    </details>
+    <details class="tg">
+     <summary>Le modèle économique</summary>
+     <div class="tb"><p style="margin:0">Gratuit pour les familles, financé par l'écosystème du mariage : partenaires mis en avant, Wedding Outline premium, affiliation. Mobile d'abord, avec Zalo comme porte d'entrée au Vietnam.</p></div>
+    </details>
+    <details class="tg">
+     <summary>La charte graphique</summary>
+     <div class="tb">
+      <p style="margin:0;font-size:14px;color:var(--fg-2)">Un rouge porte-bonheur, un brun profond et des blancs chauds. Playfair Display pour les titres, Ballet en accent calligraphié, Be Vietnam Pro pour le texte.</p>
+      <img class="charte" src="nghile/charte-v3.jpg" loading="lazy" alt="Planche de charte de Nghi Lễ Cưới Hỏi : logo, palette, typographies et maquettes">
+     </div>
+    </details>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section aria-labelledby="h-missions">
+  <p class="bridge">Mon projet phare couvre tout le cycle ; les autres montrent les étapes où j’ai eu le plus d’impact.</p>
+  <h2 id="h-missions" class="narrow" style="max-width:none"><span class="emo" aria-hidden="true">🗂️</span>Produits et projets</h2>
+  <div class="views" role="tablist" aria-label="Vues de la base Produits et projets">
+   <button role="tab" id="v-etape" data-v="etape" aria-selected="true"><svg aria-hidden="true"><use href="#i-board"/></svg>Par epic</button>
+   <button role="tab" id="v-tableau" data-v="tableau" aria-selected="false"><svg aria-hidden="true"><use href="#i-table"/></svg>Tableau</button>
+   <span class="count">10 tickets · 3 epics · tous livrés</span>
+  </div>
+  <div id="db" role="tabpanel"></div>
+ </section>
+
+ <section class="two" aria-label="Expérience et formation">
+  <div>
+   <h2><span class="emo" aria-hidden="true">💼</span>Expérience</h2>
+   <div class="row"><span class="y">2025 à auj.</span><span><a class="co" href="https://www.cloudi-fi.com/" target="_blank" rel="noopener">Cloudi-Fi</a><small>HR et employee experience</small><span class="rtags"><span class="tag Projet">Gestion de projet</span><span class="tag tl-notion">No-code</span><span class="tag Produit">Conduite du changement</span></span></span></div>
+   <div class="row"><span class="y">2025</span><span><a class="co" href="https://www.dfat.gov.au/about-us/publications/Pages/vietnam-aus4skills-fact-sheet" target="_blank" rel="noopener">Ambassade d'Australie</a><small>Alumni officer · statut cadre</small><span class="rtags"><span class="tag tl-slack">Animation de communauté</span><span class="tag Projet">Relations parties prenantes</span></span></span></div>
+   <div class="row"><span class="y">2024 à 2025</span><span><a class="co" href="https://www.gucci.com/" target="_blank" rel="noopener">Gucci</a><small>Client advisor</small><span class="rtags"><span class="tag tl-tally">Relation client</span><span class="tag Produit">Écoute des besoins</span></span></span></div>
+   <div class="row"><span class="y">2024</span><span><a class="co" href="https://www.haffner-energy.com/" target="_blank" rel="noopener">Haffner Energy</a><small>Executive assistant · statut cadre</small><span class="rtags"><span class="tag Projet">Coordination</span><span class="tag tl-google">Gestion des priorités</span></span></span></div>
+   <div class="row"><span class="y">2023 à 2024</span><span><a class="co" href="https://www.harmonicinc.com/" target="_blank" rel="noopener">Harmonic Inc.</a><small>Channel ops specialist · statut cadre</small><span class="rtags"><span class="tag Projet">Gestion des partenaires</span><span class="tag tl-google">Suivi des opérations</span></span></span></div>
+   <div class="row"><span class="y">2020 à 2023</span><span><a class="co" href="https://butmay.com/" target="_blank" rel="noopener">Sao Khuê Pens</a><small>Digital marketing specialist</small><span class="rtags"><span class="tag tl-photoshop">Marketing digital</span><span class="tag tl-canva">Création de contenu</span></span></span></div>
+   <details class="tg">
+    <summary>3 autres expériences au Vietnam</summary>
+    <div class="tb" style="padding-left:0">
+     <div class="row"><span class="y">2022</span><span><a class="co" href="https://www.giz.de/" target="_blank" rel="noopener">Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH</a><small>Project assistant · finance et comptabilité</small><span class="rtags"><span class="tag Projet">Gestion de projet</span><span class="tag tl-google">Suivi budgétaire</span></span></span></div>
+     <div class="row"><span class="y">2021 à 2022</span><span><a class="co" href="https://www.freiheit.org/vietnam" target="_blank" rel="noopener">Friedrich Naumann Foundation</a><small>Office intern</small><span class="rtags"><span class="tag Projet">Coordination</span><span class="tag tl-notion">Organisation</span></span></span></div>
+     <div class="row"><span class="y">2020 à 2022</span><span><a class="co" href="https://neu.edu.vn/" target="_blank" rel="noopener">National Economics University</a><small>Teaching assistant · freelance</small><span class="rtags"><span class="tag Produit">Pédagogie</span><span class="tag tl-slack">Prise de parole</span></span></span></div>
+    </div>
+   </details>
+  </div>
+  <div>
+   <h2><span class="emo" aria-hidden="true">🎓</span>Formation</h2>
+   <div class="row"><span class="y">2025 à 2027</span><span><a class="co" href="https://www.lisaa.com/fr/ecole/arts-appliques-graphisme-paris" target="_blank" rel="noopener">L'Institut Supérieur des Arts Appliqués, Paris</a><small>Master en communication digitale</small></span></div>
+   <div class="row"><span class="y">2022 à 2023</span><span><a class="co" href="https://www.igr.univ-rennes.fr/fr/" target="_blank" rel="noopener">IAE France, IGR-IAE Rennes</a><small>MBA international management · mention bien</small></span></div>
+   <div class="row"><span class="y">2018 à 2022</span><span><a class="co" href="https://neu.edu.vn/" target="_blank" rel="noopener">National Economics University, Vietnam</a><small>Licence en gestion de projet · mention bien</small></span></div>
+   <div class="callout" style="margin-top:14px;font-size:14.5px;padding:14px 16px">
+    <svg class="ci" aria-hidden="true"><use href="#i-award"/></svg>
+    <div>4 prix de recherche scientifique et 2 publications :
+     <div class="pubs">
+      <div class="pub"><a href="http://internationaljournalcorner.com/index.php/theijbm/article/view/160600" target="_blank" rel="noopener">Factors Affecting Retailers' Adoption of the Cash on Delivery (COD) Payment Model for e-Commerce Transactions: Case of Vietnam</a><em>The International Journal of Business and Management, mai 2021</em></div>
+      <div class="pub"><a href="https://www.iiste.org/Journals/index.php/EJBM/article/view/56036" target="_blank" rel="noopener">Level of Determinants Impact on Buyer's Purchasing Intention in Motor Liability Insurance: Case of Vietnam</a><em>European Journal of Business and Management, avril 2021</em></div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <div class="narrow" style="max-width:none">
+  <hr style="margin-top:40px">
+  <a class="bm" href="https://phuongngo.netlify.app/" target="_blank" rel="noopener">
+   <span class="bm-txt">
+    <span class="bm-t">Vous aimez ce que vous voyez&nbsp;?</span>
+    <span class="bm-d">Découvrez mes autres créations dans ma galerie en ligne.</span>
+    <span class="bm-u"><img src="moi-notion-2.png" alt="" width="16" height="16">phuongngo.netlify.app<svg aria-hidden="true"><use href="#i-ext"/></svg></span>
+   </span>
+   <span class="bm-img"><img src="moi-notion-2.png" alt="Portrait dessiné de Phuong" width="84" height="84"></span>
+  </a>
+
+  <h2 id="contact"><span class="emo" aria-hidden="true">✉️</span>Contact</h2>
+  <div class="contact">
+   <div class="ln hl"><span class="k"><svg aria-hidden="true"><use href="#i-cal"/></svg>Rendez-vous</span><a class="v" href="https://calendar.app.google/PbR8fZyYBmeqijxz7" target="_blank" rel="noopener">Choisir un créneau dans mon agenda</a></div>
+   <div class="ln"><span class="k"><svg aria-hidden="true"><use href="#i-phone"/></svg>WhatsApp</span><span class="v" id="tel">+33 7 57 56 83 84</span><button class="copy" type="button" data-copy="tel">Copier</button></div>
+   <div class="ln"><span class="k"><svg aria-hidden="true"><use href="#b-mail"/></svg>E-mail</span><a class="v" id="mail" href="mailto:phuongminhngo21@gmail.com">phuongminhngo21@gmail.com</a><button class="copy" type="button" data-copy="mail">Copier</button></div>
+   <div class="ln"><span class="k"><svg aria-hidden="true"><use href="#i-card"/></svg>LinkedIn</span><a class="v" href="https://www.linkedin.com/in/phuongminhngo21" target="_blank" rel="noopener">linkedin.com/in/phuongminhngo21</a></div>
+   <div class="ln"><span class="k"><svg aria-hidden="true"><use href="#i-pin"/></svg>Ville</span><span class="v">Paris</span></div>
+  </div>
+ </div>
+</main>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="peek" id="peek" role="dialog" aria-modal="true" aria-labelledby="pk-title" hidden>
+ <div class="bar">
+  <button class="ib" id="pk-close" type="button" aria-label="Fermer"><svg><use href="#i-x"/></svg></button>
+  <span>Produits et projets</span><span class="sep" style="color:var(--fg-3)">/</span><span id="pk-crumb"></span><span class="sp"></span>
+ </div>
+ <div class="pk-in" id="pk-body"></div>
+</aside>
+
+<script>
+const M=[
+{id:"recrutement",n:"Process de recrutement",s:["Produit"],d:"Du brief du manager au contrat signé",tools:["Notion","Tally","ATS"],cover:{img:"video/hiring-hub-poster.jpg"},
+ did:"Un processus de recrutement standardisé, outillé et automatisé, du brief du manager au contrat signé.",
+ items:["Des fiches de poste et des grilles d'évaluation standardisées, rédigées avec Claude et Notion AI à partir du brief du manager","Des modèles d'ATS reliés à Tally, avec e-mails automatiques en option","Un vivier de talents relié à l'ATS, pour recontacter d'anciens candidats et garder les candidatures spontanées","Le pilotage d'un recrutement en autonomie : lettres d'offre, contrats et contrats EOR"],
+ res:[["2 324","candidatures reçues, soit 166 par offre publiée"],["+47 %","d'effectif permanent en un an"]],
+ parts:[{t:"Hiring Hub",d:"Briefs de recrutement, suivi des candidats et vivier de talents",tool:"Notion",v:"video/hiring-hub-demo.mp4",p:"video/hiring-hub-poster.jpg",pg:[5,10]}]},
+{id:"conges-slack",n:"Congés dans Slack",s:["Produit"],d:"Demande, validation et agenda",tools:["Slack"],cover:{img:"video/pto-poster.jpg"},
+ did:"Les demandes de congés directement dans Slack : le collaborateur demande, le manager valide, et l'absence s'ajoute à Google Agenda.",
+ ctx:"Plutôt que d'ajouter un logiciel RH payant, j'ai construit le circuit dans Slack, l'outil que toute l'équipe utilise déjà chaque jour.",
+ res:[["100 %","d'adoption, en s'appuyant sur l'outil le plus utilisé de l'équipe plutôt que sur une nouvelle licence"]],
+ parts:[{t:"Congés dans Slack",d:"Demande, validation du manager et Google Agenda",tool:"Slack",v:"video/pto-requests-demo.mp4",p:"video/pto-poster.jpg",pg:[19,21]}]},
+{id:"okrs-slack",n:"OKRs dans Slack",s:["Produit"],d:"Le suivi hebdomadaire des objectifs",tools:["Slack"],cover:{img:"video/okrs-in-slack-poster.jpg"},
+ pb:"Aucun process de suivi des objectifs n'existait.",
+ did:"Un suivi hebdomadaire des objectifs, équipe par équipe, sans quitter Slack.",
+ res:[["0 → Slack","aucun process de suivi des objectifs avant, un suivi hebdomadaire dans Slack aujourd'hui"]],
+ parts:[{t:"OKRs dans Slack",d:"Le suivi hebdomadaire des objectifs, équipe par équipe",tool:"Slack",v:"video/okrs-in-slack-demo.mp4",p:"video/okrs-in-slack-poster.jpg",pg:[22,23]}]},
+{id:"starting-guide",n:"Starting guide",s:["Produit"],d:"Le kit remis avant le premier jour",tools:["Slack"],cover:{img:"video/onboarding-channel-poster.jpg"},
+ ctx:"D'abord conçu pour l'équipe DevOps, avec la préparation des managers avant l'arrivée, l'onboarding dans Slack a ensuite été étendu à tous les postes.",
+ did:"Le kit de pré-onboarding remis aux nouveaux arrivants avant leur premier jour, puis leur parcours d'arrivée dans Slack.",items:["Histoire de l'entreprise","Politique de télétravail","Avantages et notes de frais"],
+ 
+ res:[["Notion → Slack","l'onboarding migré dans l'outil que toute l'équipe utilise déjà, pour réduire les coûts de licence"]],
+ parts:[{t:"Onboarding dans Slack",d:"Un canal par nouvel arrivant, avec ses tâches et sa feuille de route",tool:"Slack",v:"video/onboarding-channel-demo.mp4",p:"video/onboarding-channel-poster.jpg",pg:[15,18]}]},
+{id:"calendrier-presta",n:"Calendrier des prestataires",s:["Produit"],d:"Congés des prestataires dans Notion",tools:["Notion"],cover:{img:"video/contractors-calendar-poster.jpg"},
+ pb:"Les absences des prestataires n'étaient pas suivies de façon standard : certains se contentaient d'un message pour prévenir.",
+ did:"Un circuit no-code pour les absences des prestataires : ils font leur demande, le manager valide, et tout apparaît dans un calendrier partagé.",
+ res:[["0 → 100 %","des absences des prestataires suivies dans un process standardisé, là où certains se contentaient d'un message pour prévenir et garder une trace"]],
+ parts:[{t:"Calendrier des prestataires",d:"Demandes de congés : formulaire, validation du manager et calendrier partagé",tool:"Notion",v:"video/contractors-calendar-demo.mp4",p:"video/contractors-calendar-poster.jpg",pg:[2,4]}]},
+{id:"easyform",n:"EasyForm",s:["Strategie"],d:"Top 3 · track Qualcomm",tools:["Pixel art","LLaMA","NPU Snapdragon"],cover:{img:"portfolio/easyform-01.jpg"},org:"RAISE your HACK by lablab.ai · équipe CREPEGREC",
+ pb:"L'IA sait coder ou rédiger, mais pas remplir un formulaire en toute sécurité sur votre ordinateur : envoyer ses documents personnels à des serveurs en ligne reste risqué.",
+ ctx:"RAISE your HACK by lablab.ai, l'un des plus grands hackathons IA d'Europe, organisé sous le Louvre : 6 247 participants, 922 équipes, 6 tracks.",
+ did:"EasyForm, le premier assistant de formulaires propulsé par un LLM et entièrement hors ligne : il remplit vos formulaires à partir de vos propres documents (CV, passeport, RIB), avec précision et sans rien envoyer dans le cloud. Construit en équipe, puis présenté en pitch.",
+ res:[["Top 3","du track Qualcomm"],["922","équipes en lice, 6 247 participants"]],
+ sites:[{t:"Présentation et démo",d:"LinkedIn",u:"https://lnkd.in/ePiPPpgt"}],
+ items:["Problème, solution et cible","Un modèle LLaMA quantifié via AnythingLLM, sur le NPU du Qualcomm AI Engine (laptop Snapdragon X Elite), et Groq pour l'inférence en ligne si besoin","Marché du traitement intelligent de documents","Benchmark face à Adobe Fill et Google Forms AI","Le parcours en 4 étapes et un quiz interactif"],
+ imgs:[["portfolio/easyform-01.jpg","Couverture"],["portfolio/easyform-03.jpg","Le problème"],["portfolio/easyform-04.jpg","La solution"],["portfolio/easyform-05.jpg","Cible"],["portfolio/easyform-06.jpg","Pourquoi EasyForm"],["portfolio/easyform-09.jpg","Le marché"],["portfolio/easyform-10.jpg","L'opportunité"],["portfolio/easyform-11.jpg","Benchmark"],["portfolio/easyform-12.jpg","Comment ça marche"],["portfolio/easyform-13.jpg","Pourquoi ça marche"]]},
+{id:"rodier",n:"Rodier",s:["Strategie"],d:"« À toutes allures » · brief battle",tools:["Persona","Plan média"],cover:{},org:"Brief battle · projet de groupe",
+ pb:"Rendre désirable une maison de maille de 174 ans pour les femmes de 40 ans et plus.",
+ did:"Le repositionnement de la maison Rodier, de la cible jusqu'au plan de diffusion.",
+ items:["Persona « Clémence, 42 ans » et parcours client","Manifeste, key visual et newsletter","Calendrier éditorial et plan média de 7 000 €"]},
+{id:"merch",n:"Merch séminaire",s:["Projet"],d:"Marbella 2026, de l'idée à la livraison",tools:["Design","Fournisseurs"],cover:{img:"portfolio/merch.jpg"},
+ ctx:"Le séminaire 2026 de Cloudi-Fi à Marbella.",
+ did:"Les goodies du séminaire, de l'idée à la livraison : j'ai participé à leur design à partir d'illustrations stock, puis géré leur production avec des fournisseurs étrangers.",
+ items:["Un sac à cordon Marbella : une composition d'illustrations stock autour de la Costa del Sol","Une casquette brodée au logo Cloudi-Fi","Un carnet aux couleurs de la marque","Sourcing, négociation et suivi de production avec des fournisseurs au Vietnam"],
+ res:[["220","goodies produits : 60 casquettes, 100 carnets et 60 sacs à cordon"],["2 semaines","de la production au Vietnam à la livraison en France"]]},
+{id:"penshow",n:"Vietnam Pen Show 2026",s:["Projet"],d:"« 950 Nét chữ » · concours de calligraphie",tools:["Plan de contenu","Réseaux sociaux"],cover:{},org:"Équipe d'organisation · Hà Nội",
+ ctx:"Un concours de calligraphie pour les 950 ans du Văn Miếu, Quốc Tử Giám.",
+ did:"Le plan de contenu et les visuels du concours, de l'annonce jusqu'au récap.",
+ items:["Plan de contenu","Posts : affiches, règlement, comptes à rebours, partenaires, programme, résultats et récap","Un kit de 32 visuels pour tout l'événement"]},
+{id:"site",n:"Site Cloudi-Fi",s:["Projet"],d:"2 pages repensées et recréées",tools:["Web"],cover:{web:["Our company","Join us"]},
+ pb:"Un projet de refonte en attente depuis deux ans.",
+ did:"La maquette et la refonte de deux pages du site : je les ai réorganisées et recréées.",items:["Maquettes des pages","Refonte et mise en ligne"],
+ res:[["2 ans","de projet en attente, relancé grâce à ma maquette, puis adopté et mis en ligne"]],
+ sites:[{t:"Our company",d:"Page entreprise · cloudi-fi.com",u:"https://www.cloudi-fi.com/about-us/our-company"},{t:"Join us",d:"Page carrières · cloudi-fi.com",u:"https://www.cloudi-fi.com/about-us/join-us"}]}
+];
+const ONE={"recrutement":"Un recrutement standardisé, du brief du manager au contrat","conges-slack":"Un circuit de congés construit dans l'outil déjà adopté","okrs-slack":"Un suivi d'objectifs chaque semaine, là où il n'y en avait aucun","starting-guide":"Un parcours d'arrivée qui commence avant le premier jour","calendrier-presta":"Les absences des prestataires dans un seul process","easyform":"Un assistant IA hors ligne, Top 3 du track Qualcomm","rodier":"Une persona, un parcours client et un plan média de 7 000 €","merch":"220 goodies, des fournisseurs à l'étranger, 2 semaines","penshow":"Le plan de contenu d'un concours pour les 950 ans du Văn Miếu","site":"Un projet bloqué depuis deux ans, relancé puis livré"};
+M.forEach(m=>m.one=ONE[m.id]||m.d);
+const TY={"recrutement": "Livré · Cloudi-Fi", "conges-slack": "Livré · Cloudi-Fi", "okrs-slack": "Livré · Cloudi-Fi", "starting-guide": "Livré · Cloudi-Fi", "calendrier-presta": "Livré · Cloudi-Fi", "merch": "Livré · Cloudi-Fi", "site": "Livré · Cloudi-Fi", "easyform": "Hackathon", "rodier": "Brief battle", "penshow": "Événement"};
+const ROLE={"recrutement": "Conception du process et des outils, puis pilotage de recrutements en autonomie", "conges-slack": "Conception et construction de bout en bout, dans Slack", "okrs-slack": "Conception et construction de bout en bout, dans Slack", "starting-guide": "Conception du kit de pré-onboarding et du parcours d'arrivée dans Slack", "calendrier-presta": "Conception et construction de bout en bout, dans Notion", "easyform": "Direction artistique : un univers de jeu vidéo rétro en pixel art (écran titre, menus, vies et pièces) pour rendre ludique un sujet administratif", "merch": "Participation au design, puis sourcing, négociation et suivi de production avec les fournisseurs", "site": "Maquette, puis refonte et recréation des deux pages", "penshow": "Au sein de l'équipe d'organisation : plan de contenu et visuels de l'événement"};
+const ORDER=["recrutement", "conges-slack", "calendrier-presta", "okrs-slack", "starting-guide", "easyform", "rodier", "merch", "site", "penshow"];
+M.forEach(m=>{m.ty=TY[m.id]||"";m.role=ROLE[m.id]||""});
+M.sort((a,b)=>ORDER.indexOf(a.id)-ORDER.indexOf(b.id));
+M.forEach((m,i)=>{m.tid="PN-"+String(i+1).padStart(2,"0");m.st=/Livré/.test(m.ty)?"Livré":"Terminé"});
+const SOFT={"recrutement":["Structuration","Autonomie"],"conges-slack":["Simplification","Conduite du changement"],"okrs-slack":["Rigueur","Vision d'ensemble"],"starting-guide":["Empathie","Itération"],"calendrier-presta":["Organisation","Sens du service"],"easyform":["Direction artistique","Pitch"],"rodier":["Empathie utilisateur","Planification budgétaire"],"merch":["Négociation","Gestion de projet"],"penshow":["Planification","Coordination"],"site":["Sens du design","Persévérance"]};
+const resCell=m=>m.res?m.res.map(r=>`<b>${esc(r[0])}</b> ${esc(r[1])}`).join("<br>"):esc(m.one);
+const RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function typeInto(el,c,txt,speed){clearTimeout(el._t);if(c)c.classList.remove("done");if(RM){el.textContent=txt;if(c)c.classList.add("done");return}let i=0;el.textContent="";(function step(){el.textContent=txt.slice(0,++i);if(i<txt.length){el._t=setTimeout(step,txt[i-1]===","?220:speed)}else if(c){el._t=setTimeout(()=>c.classList.add("done"),900)}})()}
+const STAGES=["Produit","Strategie","Projet"];
+const SL={Produit:"Produits internes",Strategie:"Cas produit et stratégie",Projet:"Pilotage de projet"};
+const SN={Produit:"livrés et utilisés",Strategie:"projets personnels",Projet:"de l'idée à la livraison"};
+const ROLES=[["Découvrir","red"],["Définir","tl-google"],["Développer","tl-photoshop"],["Livrer","tl-slack"]];
+const ROLE_OF={"recrutement":["Définir","Développer"],"conges-slack":["Définir","Livrer"],"okrs-slack":["Développer","Livrer"],"starting-guide":["Développer","Livrer"],"calendrier-presta":["Définir","Développer"],"easyform":["Découvrir","Définir","Développer"],"rodier":["Découvrir","Définir"],"merch":["Développer","Livrer"],"penshow":["Développer","Livrer"],"site":["Définir","Livrer"]};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const tagS=m=>m.s.map(s=>`<span class="tag ${s}">${SL[s]||s}</span>`).join("");
+const TL={Notion:"tl-notion",Slack:"tl-slack",Tally:"tl-tally"};
+const LG={"Figma":"figma-logo.png","Français":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzIDIiPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjIiIGZpbGw9IiMwMDU1QTQiLz48cmVjdCB4PSIxIiB3aWR0aD0iMSIgaGVpZ2h0PSIyIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMiIgd2lkdGg9IjEiIGhlaWdodD0iMiIgZmlsbD0iI0VGNDEzNSIvPjwvc3ZnPg==","Anglais":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzMCI+PGNsaXBQYXRoIGlkPSJjIj48cGF0aCBkPSJNMCAwdjMwaDYwVjB6Ii8+PC9jbGlwUGF0aD48Y2xpcFBhdGggaWQ9InQiPjxwYXRoIGQ9Ik0zMCAxNWgzMHYxNXp2MTVIMHpIMFYwelYwaDMweiIvPjwvY2xpcFBhdGg+PGcgY2xpcC1wYXRoPSJ1cmwoI2MpIj48cGF0aCBkPSJNMCAwdjMwaDYwVjB6IiBmaWxsPSIjMDEyMTY5Ii8+PHBhdGggZD0iTTAgMGw2MCAzMG0wLTMwTDAgMzAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI2Ii8+PHBhdGggZD0iTTAgMGw2MCAzMG0wLTMwTDAgMzAiIGNsaXAtcGF0aD0idXJsKCN0KSIgc3Ryb2tlPSIjQzgxMDJFIiBzdHJva2Utd2lkdGg9IjQiLz48cGF0aCBkPSJNMzAgMHYzME0wIDE1aDYwIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMTAiLz48cGF0aCBkPSJNMzAgMHYzME0wIDE1aDYwIiBzdHJva2U9IiNDODEwMkUiIHN0cm9rZS13aWR0aD0iNiIvPjwvZz48L3N2Zz4=","Vietnamien":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMCAyMCI+PHJlY3Qgd2lkdGg9IjMwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjREEyNTFEIi8+PHBvbHlnb24gZmlsbD0iI0ZGRkYwMCIgcG9pbnRzPSIxNSw0IDE2Ljc2LDkuNDIgMjIuNDIsOS40MiAxNy44NCwxMi43NiAxOS42LDE4LjE4IDE1LDE0Ljg0IDEwLjQsMTguMTggMTIuMTYsMTIuNzYgNy41OCw5LjQyIDEzLjI0LDkuNDIiLz48L3N2Zz4=","Notion": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjY4Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTYuMDkyIDExLjUzOEwxNjQuMDkuNjA4YzE4LjE3OS0xLjU2IDIyLjg1LS41MDggMzQuMjggNy44MDFsNDcuMjQzIDMzLjI4MkMyNTMuNDA2IDQ3LjQxNCAyNTYgNDguOTc1IDI1NiA1NS4yMDd2MTgyLjUyN2MwIDExLjQzOS00LjE1NSAxOC4yMDUtMTguNjk2IDE5LjI0TDY1LjQ0IDI2Ny4zNzhjLTEwLjkxMy41MTctMTYuMTEtMS4wNDMtMjEuODI1LTguMzI3TDguODI2IDIxMy44MTRDMi41ODYgMjA1LjQ4NyAwIDE5OS4yNTQgMCAxOTEuOTdWMjkuNzI2YzAtOS4zNTIgNC4xNTUtMTcuMTUzIDE2LjA5Mi0xOC4xODgiLz48cGF0aCBkPSJNMTY0LjA5LjYwOEwxNi4wOTIgMTEuNTM4QzQuMTU1IDEyLjU3MyAwIDIwLjM3NCAwIDI5LjcyNnYxNjIuMjQ1YzAgNy4yODQgMi41ODUgMTMuNTE2IDguODI2IDIxLjg0M2wzNC43ODkgNDUuMjM3YzUuNzE1IDcuMjg0IDEwLjkxMiA4Ljg0NCAyMS44MjUgOC4zMjdsMTcxLjg2NC0xMC40MDRjMTQuNTMyLTEuMDM1IDE4LjY5Ni03LjgwMSAxOC42OTYtMTkuMjRWNTUuMjA3YzAtNS45MTEtMi4zMzYtNy42MTQtOS4yMS0xMi42NmwtMS4xODUtLjg1NkwxOTguMzcgOC40MDlDMTg2Ljk0LjEgMTgyLjI3LS45NTIgMTY0LjA5LjYwOE02OS4zMjcgNTIuMjJjLTE0LjAzMy45NDUtMTcuMjE2IDEuMTU5LTI1LjE4Ni01LjMyM0wyMy44NzYgMzAuNzc4Yy0yLjA2LTIuMDg2LTEuMDI2LTQuNjkgNC4xNjMtNS4yMDdsMTQyLjI3NC0xMC4zOTVjMTEuOTQ3LTEuMDQzIDE4LjE3IDMuMTIgMjIuODQyIDYuNzU4bDI0LjQwMSAxNy42OGMxLjA0My41MjUgMy42MzggMy42MzcuNTE3IDMuNjM3TDcxLjE0NiA1Mi4wOTV6bS0xNi4zNiAxODMuOTU0VjgxLjIyMmMwLTYuNzY3IDIuMDc3LTkuODg3IDguMy0xMC40MTNMMjMwLjAyIDYwLjkzYzUuNzI0LS41MTcgOC4zMSAzLjEyIDguMzEgOS44Nzl2MTUzLjkxN2MwIDYuNzY3LTEuMDQ0IDEyLjQ5LTEwLjM4NyAxMy4wMDhsLTE2MS40ODcgOS4zNjFjLTkuMzQzLjUxNy0xMy40ODktMi41OTQtMTMuNDg5LTEwLjkyMU0yMTIuMzc3IDg5LjUzYzEuMDM0IDQuNjgxIDAgOS4zNjItNC42ODEgOS44OTdsLTcuNzgzIDEuNTQydjExNC40MDRjLTYuNzU4IDMuNjM3LTEyLjk4MSA1LjcxNS0xOC4xOCA1LjcxNWMtOC4zMDggMC0xMC4zODYtMi42MDQtMTYuNjA5LTEwLjM5NmwtNTAuODk4LTgwLjA3OXY3Ny40NzZsMTYuMSAzLjY0NnMwIDkuMzYyLTEyLjk4OSA5LjM2MmwtMzUuODE0IDIuMDc3Yy0xLjA0My0yLjA4NiAwLTcuMjg0IDMuNjMtOC4zMThsOS4zNTEtMi41OTVWMTA5LjgyM2wtMTIuOTgtMS4wNTJjLTEuMDQ0LTQuNjggMS41NS0xMS40MzkgOC44MjYtMTEuOTY1bDM4LjQyNi0yLjU4NWw1Mi45NTggODEuMTEzdi03MS43NmwtMTMuNDk4LTEuNTUyYy0xLjA0My01LjczMyAzLjExMS05Ljg5NiA4LjMtMTAuNDA0eiIvPjwvc3ZnPg==", "Slack": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBmaWxsPSIjZTAxZTVhIiBkPSJNNTMuODQxIDE2MS4zMmMwIDE0LjgzMi0xMS45ODcgMjYuODItMjYuODE5IDI2LjgyUy4yMDMgMTc2LjE1Mi4yMDMgMTYxLjMyYzAtMTQuODMxIDExLjk4Ny0yNi44MTggMjYuODItMjYuODE4SDUzLjg0em0xMy40MSAwYzAtMTQuODMxIDExLjk4Ny0yNi44MTggMjYuODE5LTI2LjgxOHMyNi44MTkgMTEuOTg3IDI2LjgxOSAyNi44MTl2NjcuMDQ3YzAgMTQuODMyLTExLjk4NyAyNi44Mi0yNi44MiAyNi44MmMtMTQuODMgMC0yNi44MTgtMTEuOTg4LTI2LjgxOC0yNi44MnoiLz48cGF0aCBmaWxsPSIjMzZjNWYwIiBkPSJNOTQuMDcgNTMuNjM4Yy0xNC44MzIgMC0yNi44Mi0xMS45ODctMjYuODItMjYuODE5Uzc5LjIzOSAwIDk0LjA3IDBzMjYuODE5IDExLjk4NyAyNi44MTkgMjYuODE5djI2Ljgyem0wIDEzLjYxM2MxNC44MzIgMCAyNi44MTkgMTEuOTg3IDI2LjgxOSAyNi44MTlzLTExLjk4NyAyNi44MTktMjYuODIgMjYuODE5SDI2LjgyQzExLjk4NyAxMjAuODg5IDAgMTA4LjkwMiAwIDk0LjA2OWMwLTE0LjgzIDExLjk4Ny0yNi44MTggMjYuODE5LTI2LjgxOHoiLz48cGF0aCBmaWxsPSIjMmViNjdkIiBkPSJNMjAxLjU1IDk0LjA3YzAtMTQuODMyIDExLjk4Ny0yNi44MiAyNi44MTgtMjYuODJzMjYuODIgMTEuOTg4IDI2LjgyIDI2Ljgycy0xMS45ODggMjYuODE5LTI2LjgyIDI2LjgxOUgyMDEuNTV6bS0xMy40MSAwYzAgMTQuODMyLTExLjk4OCAyNi44MTktMjYuODIgMjYuODE5Yy0xNC44MzEgMC0yNi44MTgtMTEuOTg3LTI2LjgxOC0yNi44MlYyNi44MkMxMzQuNTAyIDExLjk4NyAxNDYuNDg5IDAgMTYxLjMyIDBzMjYuODE5IDExLjk4NyAyNi44MTkgMjYuODE5eiIvPjxwYXRoIGZpbGw9IiNlY2IyMmUiIGQ9Ik0xNjEuMzIgMjAxLjU1YzE0LjgzMiAwIDI2LjgyIDExLjk4NyAyNi44MiAyNi44MThzLTExLjk4OCAyNi44Mi0yNi44MiAyNi44MmMtMTQuODMxIDAtMjYuODE4LTExLjk4OC0yNi44MTgtMjYuODJWMjAxLjU1em0wLTEzLjQxYy0xNC44MzEgMC0yNi44MTgtMTEuOTg4LTI2LjgxOC0yNi44MmMwLTE0LjgzMSAxMS45ODctMjYuODE4IDI2LjgxOS0yNi44MThoNjcuMjVjMTQuODMyIDAgMjYuODIgMTEuOTg3IDI2LjgyIDI2LjgxOXMtMTEuOTg4IDI2LjgxOS0yNi44MiAyNi44MTl6Ii8+PC9zdmc+", "Slack Workflow": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBmaWxsPSIjZTAxZTVhIiBkPSJNNTMuODQxIDE2MS4zMmMwIDE0LjgzMi0xMS45ODcgMjYuODItMjYuODE5IDI2LjgyUy4yMDMgMTc2LjE1Mi4yMDMgMTYxLjMyYzAtMTQuODMxIDExLjk4Ny0yNi44MTggMjYuODItMjYuODE4SDUzLjg0em0xMy40MSAwYzAtMTQuODMxIDExLjk4Ny0yNi44MTggMjYuODE5LTI2LjgxOHMyNi44MTkgMTEuOTg3IDI2LjgxOSAyNi44MTl2NjcuMDQ3YzAgMTQuODMyLTExLjk4NyAyNi44Mi0yNi44MiAyNi44MmMtMTQuODMgMC0yNi44MTgtMTEuOTg4LTI2LjgxOC0yNi44MnoiLz48cGF0aCBmaWxsPSIjMzZjNWYwIiBkPSJNOTQuMDcgNTMuNjM4Yy0xNC44MzIgMC0yNi44Mi0xMS45ODctMjYuODItMjYuODE5Uzc5LjIzOSAwIDk0LjA3IDBzMjYuODE5IDExLjk4NyAyNi44MTkgMjYuODE5djI2Ljgyem0wIDEzLjYxM2MxNC44MzIgMCAyNi44MTkgMTEuOTg3IDI2LjgxOSAyNi44MTlzLTExLjk4NyAyNi44MTktMjYuODIgMjYuODE5SDI2LjgyQzExLjk4NyAxMjAuODg5IDAgMTA4LjkwMiAwIDk0LjA2OWMwLTE0LjgzIDExLjk4Ny0yNi44MTggMjYuODE5LTI2LjgxOHoiLz48cGF0aCBmaWxsPSIjMmViNjdkIiBkPSJNMjAxLjU1IDk0LjA3YzAtMTQuODMyIDExLjk4Ny0yNi44MiAyNi44MTgtMjYuODJzMjYuODIgMTEuOTg4IDI2LjgyIDI2Ljgycy0xMS45ODggMjYuODE5LTI2LjgyIDI2LjgxOUgyMDEuNTV6bS0xMy40MSAwYzAgMTQuODMyLTExLjk4OCAyNi44MTktMjYuODIgMjYuODE5Yy0xNC44MzEgMC0yNi44MTgtMTEuOTg3LTI2LjgxOC0yNi44MlYyNi44MkMxMzQuNTAyIDExLjk4NyAxNDYuNDg5IDAgMTYxLjMyIDBzMjYuODE5IDExLjk4NyAyNi44MTkgMjYuODE5eiIvPjxwYXRoIGZpbGw9IiNlY2IyMmUiIGQ9Ik0xNjEuMzIgMjAxLjU1YzE0LjgzMiAwIDI2LjgyIDExLjk4NyAyNi44MiAyNi44MThzLTExLjk4OCAyNi44Mi0yNi44MiAyNi44MmMtMTQuODMxIDAtMjYuODE4LTExLjk4OC0yNi44MTgtMjYuODJWMjAxLjU1em0wLTEzLjQxYy0xNC44MzEgMC0yNi44MTgtMTEuOTg4LTI2LjgxOC0yNi44MmMwLTE0LjgzMSAxMS45ODctMjYuODE4IDI2LjgxOS0yNi44MThoNjcuMjVjMTQuODMyIDAgMjYuODIgMTEuOTg3IDI2LjgyIDI2LjgxOXMtMTEuOTg4IDI2LjgxOS0yNi44MiAyNi44MTl6Ii8+PC9zdmc+", "Tally": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iNiIgZmlsbD0iIzAwMCIvPjxwYXRoIGQ9Ik04IDYuNXYxMU0xMiA2LjV2MTFNMTYgNi41djExIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMi4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=", "Jira": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIyLjUgMTEuMyAxMi43IDEuNSAxMiAuOCA0LjYgOC4yIDEuNSAxMS4zYS45LjkgMCAwIDAgMCAxLjNsNi43IDYuNyAzLjggMy45IDcuNC03LjQuMS0uMSAzLTMuMWEuOS45IDAgMCAwIDAtMS4zek0xMiAxNS4zIDguNiAxMiAxMiA4LjZsMy40IDMuNHoiIGZpbGw9IiMyNjg0RkYiLz48L3N2Zz4=", "Google Workspace": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNjYiPjxwYXRoIGZpbGw9IiM1ZjYzNjgiIGQ9Ik00MDIuNTUxIDE4LjE5OXE2LjAyNCAwIDEwLjI1MyA0Ljc0MnE0LjM1NyA0Ljc0MiA0LjM1NyAxMS41MzRxMCA2LjkyLTQuMzU3IDExLjY2M3EtNC4yMyA0Ljc0Mi0xMC4yNTMgNC43NDJoLS4xMjhxLTMuMzMyIDAtNi4xNTItMS40MXQtNC4yMjktMy44NDVoLS4yNTZsLjI1NiA0LjIzdjEzLjU4NGgtNS43NjdWMTkuMDk2aDUuNTF2NC4zNTdoLjI1N3ExLjQxLTIuNDM1IDQuMjMtMy44NDRxMi44MTgtMS40MSA2LjI4LTEuNDFtLTMyLjY4LS4xMjhxNC4xIDAgNy40MzMgMi4wNXEzLjMzMiAyLjA1IDQuNjEzIDUuMTI3bC01LjEyNiAyLjE3OGE2LjU0IDYuNTQgMCAwIDAtMi44Mi0zLjA3NmE5IDkgMCAwIDAtNC40ODUtMS4wMjVhNy40MyA3LjQzIDAgMCAwLTQuMTAxIDEuMDI1cS0xLjc5NSAxLjE1NS0xLjc5NSAyLjgycTAgMi42OTEgNC45OTkgMy43MTdsNC42MTQgMS4yODFxOS4yMjcgMi4xOCA5LjIyNyA5LjIyOHEwIDMuOTczLTMuNDYgNi43OTJ0LTguOTcyIDIuNjkycS00LjYxMyAwLTguMDc0LTIuNDM1YTEzLjMzIDEzLjMzIDAgMCAxLTQuOTk4LTYuMjhsNS4xMjctMi4xNzlxMS4xNTMgMi42OTEgMy4yMDQgNC4yM2E3Ljk1IDcuOTUgMCAwIDAgNC43NDEgMS41MzdxMi44MiAwIDQuNjE0LTEuMTUzcTEuNzk0LTEuMTU1IDEuOTIzLTIuODJxMC0yLjk0Ny00LjQ4Ni00LjM1N2wtNS4zODMtMS4yODJxLTguOTctMi4zMDctOC45Ny04LjcxNXEwLTQuMjMgMy40Ni02Ljc5MnEzLjQ2LTIuNTYzIDguNzE0LTIuNTYzbS04MS4xMjYuMTI4cTYuOTIgMCAxMS4yNzggNC42MTRxNC40ODYgNC42MTMgNC40ODYgMTEuNjYycTAgNy4xNzgtNC40ODYgMTEuNzlxLTQuNDg1IDQuNjE1LTExLjI3OCA0LjYxNXEtNi43OTIgMC0xMS40MDYtNC42MTRxLTQuNDg2LTQuNjE0LTQuNDg2LTExLjc5cTAtNy4wNSA0LjQ4Ni0xMS42NjN0MTEuNDA2LTQuNjE0bTIwOC4yNiAwcTYuOTIgMCAxMC44OTQgNC4zNTdUNTEyIDM0Ljk4OHYuNjRoLTI0LjIyMnEuMTI4IDQuNDg2IDIuOTQ3IDcuMzA2dDYuOTIxIDIuNjkxcTUuNTExIDAgOC43MTUtNS41MWw1LjEyNiAyLjU2MmExNS40IDE1LjQgMCAwIDEtNS43NjcgNi4wMjRxLTMuNTg4IDIuMTc4LTguMzMgMi4xNzlxLTYuNzkzIDAtMTEuMTUtNC42MTR0LTQuMzU4LTExLjc5cTAtNi45MjIgNC4yMy0xMS42NjNxNC4yMy00Ljc0MyAxMC44OTMtNC42MTRtLTMwLjYzIDBxNC43NDIgMCA4LjIwMiAyLjMwN3Q1LjI1NSA2LjUzNmwtNS4yNTUgMi4xNzlxLTIuNDM0LTUuNzY4LTguNTg3LTUuNzY4cS0zLjk3MiAwLTYuOTIgMy4yMDRxLTIuODIgMy4yMDQtMi44MiA3LjgxOHQyLjgyIDcuOTQ2cTIuOTQ4IDMuMjA0IDYuOTIgMy4yMDRxNi4yOCAwIDguODQ0LTUuNzY3bDUuMjU0IDIuMTc5cS0xLjc5NCA0LjIzLTUuMzgzIDYuNTM2cS0zLjU4OCAyLjMwNy04LjMzIDIuMzA3cS02LjkyMSAwLTExLjQwNi00LjYxNHEtNC40ODYtNC43NDItNC40ODYtMTEuNzlxMC03LjA1IDQuNDg2LTExLjY2M3QxMS40MDYtNC42MTRtLTMzLjQ1IDBxNi40MDggMCAxMC4xMjUgMy4zMzJ0My43MTYgOS4zNTZ2MTguOTY3aC01LjUxdi00LjIyOWgtLjI1N3EtMy41ODggNS4yNTUtOS42MTIgNS4yNTVxLTQuOTk4IDAtOC40NTgtMi45NDh0LTMuNDYtNy41NjJxMC00Ljc0IDMuNTg4LTcuNTYxdDkuNzQtMi44MnE1LjEyNyAwIDguNDU5IDEuNzk1di0xLjI4MnEwLTMuMDc2LTIuNDM1LTUuMTI2YTguMiA4LjIgMCAwIDAtNS40MjMtMi4wNTFoLS4wODhxLTQuODcgMC03LjY5IDQuMTAxbC01LjEyNi0zLjIwNHE0LjIzLTYuMDIzIDEyLjQzMS02LjAyM00yMjMuNjQgNC45OTlsOS40ODMgMzUuMjQzaC4yNTdsOS43NC0yOS4yMmg1LjM4M2w5Ljc0IDI5LjIyaC4yNTZsOC45NzEtMzUuMjQ0aDYuMDI0bC0xMi4wNDcgNDQuODU2aC01Ljg5NkwyNDUuOTQgMjAuMjVoLS4yNTZsLTkuNzQgMjkuNjA1aC01Ljg5NUwyMTcuNjE2IDQuOTk4em05OS44MzYgMTMuMnEyLjQzNSAwIDQuMjMuNzY5bC0xLjc5NSA1LjYzOXEtMS4wMjUtLjM4NS0zLjMzMi0uMzg1cS0zLjMzMiAwLTUuNzY3IDIuNTYzdC0yLjQzNSA2LjE1MnYxNi45MTdoLTUuNzY3VjE5LjA5Nmg1LjUxdjUuMTI2aC4yNTdxLjg5Ny0yLjU2MyAzLjcxNy00LjIyOXQ1LjM4Mi0xLjc5NG0xMi42ODgtMTMuMlYzMi42OGwxMy4zMjktMTMuNTg1aDcuMzA1di4yNTZsLTExLjkxOSAxMS45MmwxMi41NiAxOC4zMjZ2LjI1NmgtNy4wNDlsLTkuNDg0LTE0LjQ4MmwtNC43NDIgNC43NDJ2OS43NGgtNS43NjdWNC45OTh6bTk3LjUzIDI5LjYwNHEtMy40NiAwLTUuODk1IDEuNjY2cS0yLjQzNiAxLjY2Ni0yLjMwNyA0LjIzcTAgMi4zMDcgMS45MjIgMy43MTZxMS45MjMgMS40MSA0LjQ4NiAxLjUzOHEzLjU4OCAwIDYuNDA4LTIuNjkxdDIuOTQ4LTYuMjhxLTIuNjkyLTIuMTgtNy41NjItMi4xNzltLTMyLjE2OC0xMS4xNXEtNC4yMyAwLTcuMDQ5IDMuMDc2cS0yLjY5MSAzLjIwNC0yLjY5MSA3Ljk0NnEwIDQuOTk5IDIuNjkxIDguMDc0cTIuODIgMy4wNzUgNy4wNDkgMy4wNzZ0Ny4wNDktMy4wNzZxMi44Mi0zLjA3NSAyLjgyLTguMDc0cTAtNC43NDItMi44Mi03Ljk0NnQtNy4wNS0zLjA3Nm0tMTEyLjc4MSAwcS00LjIzIDAtNy4xNzcgMy4wNzZxLTIuOTQ4IDMuMDc2LTIuOTQ4IDcuOTQ2cTAgNC45OTkgMi45NDggOC4wNzR0Ny4xNzcgMy4wNzZ0Ny4xNzctMy4wNzZxMi45NDctMy4wNzUgMi44Mi04LjA3NHEwLTQuODctMi44Mi03Ljk0NnEtMi45NDgtMy4wNzUtNy4xNzctMy4wNzZtMjA4LjEzMiAwcS0zLjIwNCAwLTUuNTEgMS45MjNxLTIuMzA4IDEuOTIyLTMuMjA1IDUuMzgyaDE3LjY4NnEtLjI1NS0zLjIwNC0yLjU2My01LjI1NHEtMi4zMDctMi4wNS02LjQwOC0yLjA1Ii8+PHBhdGggZmlsbD0iIzQyODVmNCIgZD0iTTI1Ljg4OCAzMC4yNDZ2LTcuMDQ5aDIzLjMyNmMuMjY3IDEuNDM3LjM5NiAyLjg5Ni4zODQgNC4zNTdjMCA1LjEyNy0xLjQxIDExLjY2My02LjAyNCAxNi4xNDlDMzkuMDkgNDguNDQ1IDMzLjQ1IDUwLjg4IDI1Ljc2IDUwLjg4QzExLjc5IDUwLjg4IDAgMzkuNDczIDAgMjUuNTA0UzExLjc5IDAgMjUuNzYgMGM3LjgxOCAwIDEzLjMyOSAzLjA3NiAxNy41NTggNy4wNDlsLTQuOTk4IDQuODdBMTguMTk5IDE4LjE5OSAwIDAgMCA3LjU2IDI1LjUwNGMwIDEwLjI1MyA4LjA3NSAxOC40NTUgMTguMiAxOC40NTVjNi42NjQgMCAxMC41MDgtMi42OTEgMTIuOTQzLTUuMTI2YzEuOTIzLTEuOTIzIDMuMjA0LTQuNzQyIDMuNzE3LTguNTg3eiIvPjxwYXRoIGZpbGw9IiNlYTQzMzUiIGQ9Ik04NS4wOTggMzQuNDc1YzAgOS40ODQtNy40MzMgMTYuNDA1LTE2LjUzMiAxNi40MDVTNTIuMTYgNDMuOTU5IDUyLjE2IDM0LjQ3NXM3LjQzMy0xNi40MDQgMTYuNDA1LTE2LjQwNGM4Ljk3IDAgMTYuNTMyIDYuOTIgMTYuNTMyIDE2LjQwNG0tNy4zMDUgMGMwLTUuODk1LTQuMjI5LTkuODY4LTkuMjI3LTkuODY4cy05LjIyOCAzLjk3My05LjIyOCA5Ljg2OHM0LjM1OCA5Ljk5NyA5LjIyOCA5Ljk5N3M5LjIyNy00LjEwMiA5LjIyNy05Ljk5NyIvPjxwYXRoIGZpbGw9IiNmYmJjMDQiIGQ9Ik0xMjAuOTgzIDM0LjQ3NWMwIDkuNDg0LTcuNDMzIDE2LjQwNS0xNi41MzIgMTYuNDA1cy0xNi40MDUtNi45MjEtMTYuNDA1LTE2LjQwNXM3LjQzMy0xNi40MDQgMTYuNDA1LTE2LjQwNGM4Ljk3IDAgMTYuNTMyIDYuOTIgMTYuNTMyIDE2LjQwNG0tNy4zMDUgMGMwLTUuODk1LTQuMjMtOS44NjgtOS4yMjctOS44NjhjLTQuOTk5IDAtOS4yMjggMy45NzMtOS4yMjggOS44NjhzNC4zNTcgOS45OTcgOS4yMjggOS45OTdzOS4yMjctNC4xMDIgOS4yMjctOS45OTciLz48cGF0aCBmaWxsPSIjNDI4NWY0IiBkPSJNMTU1LjMzIDE5LjA5NnYyOS40NzdjMCAxMi4wNDctNy4xNzcgMTcuMDQ1LTE1LjYzNSAxNy4wNDVjLTcuOTQ2IDAtMTIuNjg4LTUuMzgzLTE0LjQ4Mi05Ljc0bDYuMjgtMi41NjNjMS4xNTMgMi42OTEgMy44NDQgNS44OTUgOC4yMDIgNS44OTVjNS41MSAwIDguODQzLTMuNDYgOC44NDMtOS42MTJ2LTIuNDM1aC0uMjU3YTExLjE1IDExLjE1IDAgMCAxLTguNzE1IDMuNzE3Yy04LjA3NCAwLTE1LjYzNS03LjE3Ny0xNS42MzUtMTYuMjc3YzAtOS4yMjcgNy41NjEtMTYuNTMyIDE1LjYzNS0xNi41MzJjMy45NzMgMCA3LjA1IDEuNzk0IDguNzE1IDMuNzE2aC4yNTd2LTIuNjkxem0tNi4yOCAxNS41MDdjMC01Ljc2Ny0zLjg0NC05Ljk5Ni04Ljg0My05Ljk5NmMtNC44NyAwLTkuMSA0LjIyOS05LjEgOS45OTZjMCA1LjY0IDQuMjMgOS44NjkgOS4xIDkuODY5YzQuOTk5IDAgOC44NDMtNC4yMyA4Ljg0My05Ljg2OSIvPjxwYXRoIGZpbGw9IiMzNGE4NTMiIGQ9Ik0xNjAuMzI4IDEuOTIyaDcuMTc3djQ4LjA2aC03LjE3N3oiLz48cGF0aCBmaWxsPSIjZWE0MzM1IiBkPSJtMTk1LjMxNiAzOS44NThsNS42NCAzLjg0NWMtMS43OTUgMi41NjMtNi4xNTIgNy4xNzctMTMuNzE0IDcuMTc3Yy05LjM1NiAwLTE2LjI3Ni03LjE3Ny0xNi4yNzYtMTYuNDA1YzAtOS43NCA3LjA0OS0xNi40MDQgMTUuNTA3LTE2LjQwNGM4LjQ1OSAwIDEyLjY4OCA2Ljc5MiAxMy45NyAxMC41MDlsLjc2OSAxLjc5NGwtMjEuOTE2IDkuMWMxLjY2NiAzLjMzMiA0LjIzIDQuOTk4IDcuOTQ2IDQuOTk4YzMuNzE3IDAgNi4xNTItMS43OTUgOC4wNzQtNC42MTRtLTE3LjE3My01Ljg5NmwxNC42MS02LjAyM2MtLjc2OS0yLjA1LTMuMjA0LTMuNDYtNi4wMjQtMy40NmMtMy43MTYgMC04Ljg0MyAzLjIwNC04LjU4NiA5LjQ4MyIvPjwvc3ZnPg==", "Microsoft 365": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjEwLjUiIGhlaWdodD0iMTAuNSIgZmlsbD0iI0YyNTAyMiIvPjxyZWN0IHg9IjEyLjUiIHk9IjEiIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjEwLjUiIGZpbGw9IiM3RkJBMDAiLz48cmVjdCB4PSIxIiB5PSIxMi41IiB3aWR0aD0iMTAuNSIgaGVpZ2h0PSIxMC41IiBmaWxsPSIjMDBBNEVGIi8+PHJlY3QgeD0iMTIuNSIgeT0iMTIuNSIgd2lkdGg9IjEwLjUiIGhlaWdodD0iMTAuNSIgZmlsbD0iI0ZGQjkwMCIvPjwvc3ZnPg==", "Canva": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfOTA1XzE3OTApIj48cGF0aCBkPSJNNDAgODBDNjIuMDkxNCA4MCA4MCA2Mi4wOTE0IDgwIDQwQzgwIDE3LjkwODYgNjIuMDkxNCAwIDQwIDBDMTcuOTA4NiAwIDAgMTcuOTA4NiAwIDQwQzAgNjIuMDkxNCAxNy45MDg2IDgwIDQwIDgwWiIgZmlsbD0iIzdEMkFFNyIvPjxwYXRoIGQ9Ik00MCA4MEM2Mi4wOTE0IDgwIDgwIDYyLjA5MTQgODAgNDBDODAgMTcuOTA4NiA2Mi4wOTE0IDAgNDAgMEMxNy45MDg2IDAgMCAxNy45MDg2IDAgNDBDMCA2Mi4wOTE0IDE3LjkwODYgODAgNDAgODBaIiBmaWxsPSJ1cmwoI3BhaW50MF9yYWRpYWxfOTA1XzE3OTApIi8+PHBhdGggZD0iTTQwIDgwQzYyLjA5MTQgODAgODAgNjIuMDkxNCA4MCA0MEM4MCAxNy45MDg2IDYyLjA5MTQgMCA0MCAwQzE3LjkwODYgMCAwIDE3LjkwODYgMCA0MEMwIDYyLjA5MTQgMTcuOTA4NiA4MCA0MCA4MFoiIGZpbGw9InVybCgjcGFpbnQxX3JhZGlhbF85MDVfMTc5MCkiLz48cGF0aCBkPSJNNDAgODBDNjIuMDkxNCA4MCA4MCA2Mi4wOTE0IDgwIDQwQzgwIDE3LjkwODYgNjIuMDkxNCAwIDQwIDBDMTcuOTA4NiAwIDAgMTcuOTA4NiAwIDQwQzAgNjIuMDkxNCAxNy45MDg2IDgwIDQwIDgwWiIgZmlsbD0idXJsKCNwYWludDJfcmFkaWFsXzkwNV8xNzkwKSIvPjxwYXRoIGQ9Ik00MCA4MEM2Mi4wOTE0IDgwIDgwIDYyLjA5MTQgODAgNDBDODAgMTcuOTA4NiA2Mi4wOTE0IDAgNDAgMEMxNy45MDg2IDAgMCAxNy45MDg2IDAgNDBDMCA2Mi4wOTE0IDE3LjkwODYgODAgNDAgODBaIiBmaWxsPSJ1cmwoI3BhaW50M19yYWRpYWxfOTA1XzE3OTApIi8+PHBhdGggZD0iTTU3LjI2OTEgNDguMjA1MkM1Ni45MzkgNDguMjA1MiA1Ni42NDg1IDQ4LjQ4NCA1Ni4zNDYyIDQ5LjA5MjhDNTIuOTMyMyA1Ni4wMTUzIDQ3LjAzNTggNjAuOTEzNCA0MC4yMTI1IDYwLjkxMzRDMzIuMzIyOCA2MC45MTM0IDI3LjQzNyA1My43OTEzIDI3LjQzNyA0My45NTIyQzI3LjQzNyAyNy4yODU1IDM2LjcyMzIgMTcuNjQ5MSA0NC44Nzk2IDE3LjY0OTFDNDguNjkxIDE3LjY0OTEgNTEuMDE4NiAyMC4wNDQzIDUxLjAxODYgMjMuODU1OUM1MS4wMTg2IDI4LjM3OTYgNDguNDQ4NSAzMC43NzQ4IDQ4LjQ0ODUgMzIuMzcwMkM0OC40NDg1IDMzLjA4NjQgNDguODkzOSAzMy41MjAxIDQ5Ljc3NzMgMzMuNTIwMUM1My4zMjY0IDMzLjUyMDEgNTcuNDkxOCAyOS40NDE5IDU3LjQ5MTggMjMuNjgwOEM1Ny40OTE4IDE4LjA5NDcgNTIuNjMgMTMuOTg4OCA0NC40NzM3IDEzLjk4ODhDMzAuOTk0IDEzLjk4ODggMTkuMDE0MiAyNi40ODU4IDE5LjAxNDIgNDMuNzc3QzE5LjAxNDIgNTcuMTYxNCAyNi42NTcyIDY2LjAwNjEgMzguNDUgNjYuMDA2MUM1MC45NjY4IDY2LjAwNjEgNTguMjA0MyA1My41NTI2IDU4LjIwNDMgNDkuNTEwNUM1OC4yMDQzIDQ4LjYxNTMgNTcuNzQ2NiA0OC4yMDUyIDU3LjI2OTEgNDguMjA1MloiIGZpbGw9IndoaXRlIi8+PC9nPjxkZWZzPjxyYWRpYWxHcmFkaWVudCBpZD0icGFpbnQwX3JhZGlhbF85MDVfMTc5MCIgY3g9IjAiIGN5PSIwIiByPSIxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgxNS40NTMgNzAuOTA1Nykgcm90YXRlKC00OS40MTYpIHNjYWxlKDYxLjg3MzMpIj48c3RvcCBzdG9wLWNvbG9yPSIjNjQyMEZGIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNjQyMEZGIiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjxyYWRpYWxHcmFkaWVudCBpZD0icGFpbnQxX3JhZGlhbF85MDVfMTc5MCIgY3g9IjAiIGN5PSIwIiByPSIxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgyMS4xNzg4IDkuMDk0NTcpIHJvdGF0ZSg1NC43MDMpIHNjYWxlKDY5Ljc3MzUpIj48c3RvcCBzdG9wLWNvbG9yPSIjMDBDNENDIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDBDNENDIiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjxyYWRpYWxHcmFkaWVudCBpZD0icGFpbnQyX3JhZGlhbF85MDVfMTc5MCIgY3g9IjAiIGN5PSIwIiByPSIxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgxNS40NTI2IDcwLjkwNTMpIHJvdGF0ZSgtNDUuMTk1NCkgc2NhbGUoNjEuMTI0MiAyOC4xMTE4KSI+PHN0b3Agc3RvcC1jb2xvcj0iIzY0MjBGRiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzY0MjBGRiIgc3RvcC1vcGFjaXR5PSIwIi8+PC9yYWRpYWxHcmFkaWVudD48cmFkaWFsR3JhZGllbnQgaWQ9InBhaW50M19yYWRpYWxfOTA1XzE3OTAiIGN4PSIwIiBjeT0iMCIgcj0iMSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzIuNzE1OCAxMC43Nzg5KSByb3RhdGUoNjYuNTE5OCkgc2NhbGUoNjIuOTgzNiAxMDUuNTEyKSI+PHN0b3Agc3RvcC1jb2xvcj0iIzAwQzRDQyIgc3RvcC1vcGFjaXR5PSIwLjcyNTkxNiIvPjxzdG9wIG9mZnNldD0iMC4wMDAxIiBzdG9wLWNvbG9yPSIjMDBDNENDIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDBDNENDIiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjxjbGlwUGF0aCBpZD0iY2xpcDBfOTA1XzE3OTAiPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgZmlsbD0id2hpdGUiLz48L2NsaXBQYXRoPjwvZGVmcz48L3N2Zz4=", "Photoshop": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjUwIj48cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI0OS42IiBmaWxsPSIjMDAxZTM2IiByeD0iNDIuNSIvPjxwYXRoIGZpbGw9IiMzMWE4ZmYiIGQ9Ik01Ny42NDQgMTc1LjAzNVY2NS4yOTdxMC0xLjIwMSAxLjAzMS0xLjIwMmwxLjA4Ny0uMDAzbDEuODU4LS4wMmwyLjU4Mi0uMDUxbDguNjUtLjE4M2w5LjI3NS0uMTcycTQuODkzLS4wODUgOS43MDItLjA4NnExMy4wNSAwIDIxLjk4MiAzLjI2M2EzOC4xIDM4LjEgMCAwIDEgMTQuMzQgOC43NThhMzMuNiAzMy42IDAgMCAxIDcuODE0IDEyLjEwOGE0MC4yIDQwLjIgMCAwIDEgMi40MDUgMTMuODI0cTAgMTMuNzQxLTYuMzU1IDIyLjY2OWEzNS45IDM1LjkgMCAwIDEtMTYuNiAxMi43NTZsLS41NzMuMjFjLTYuOTczIDIuNjAxLTE0LjY5NSAzLjU0MS0yMy4xNjQgMy42bC0xLjMxNi4wMDRsLTEuOTUzLS4wMWwtLjk4NS0uMDE0bC0xLjA5OC0uMDI2bC0uNjYyLS4wMjZsLS40MDItLjAyMWwtLjk4OS0uMDM2bC0xLjIwOS0uMDI1bC0xLjgyLS4wMTNsLS40MDUtLjAwMXYzNC4yNjNhMS4zNjYgMS4zNjYgMCAwIDEtMS41NDYgMS41NDZINTguODQ3cS0xLjIwNC4wMDEtMS4yMDMtMS4zNzRNODAuODQgODQuNzAzdjM1Ljc5MnEyLjIzLjE3MyA0LjEyLjE3Mmg1LjY2OGE0MC4zIDQwLjMgMCAwIDAgMTEuNTMzLTEuNzI3bC43NDYtLjIzM2ExOC41IDE4LjUgMCAwIDAgOC43NTktNS42NjhxMy4yMjgtMy44MDcgMy4zNDQtMTAuNDkybC4wMDUtLjQ5OWMuMDktMy4zMjItLjc3NC02LjYtMi40OTEtOS40NDVhMTYgMTYgMCAwIDAtNy40Ny02LjA5N2EzMS44IDMxLjggMCAwIDAtMTIuNTM3LTIuMTQ2bC0yLjE3OC4wMDZsLTEuMzc0LjAxMmwtMS4zMTEuMDE3bC0xLjg1LjAzNmwtMS4zNS4wMzhsLS43MDEuMDI2bC0uOTM3LjA0NGwtLjc5OC4wNDlsLS40NTUuMDM2bC0uMzkzLjAzOGwtLjE3My4wMnptMTIzLjkzIDI5LjI4NGE0MC4yIDQwLjIgMCAwIDAtOS40NTgtMy40NDJsLS43Ni0uMTY0YTU0LjMgNTQuMyAwIDAgMC0xMS4wMDktMS4zNjNsLS45MjYtLjAxMWEyMi4yIDIyLjIgMCAwIDAtNi40NC43NzNhNS44IDUuOCAwIDAgMC0zLjM1IDIuMTQ2YTUuNCA1LjQgMCAwIDAtLjg1OCAyLjkyYTQuNTYgNC41NiAwIDAgMCAxLjAzIDIuNzQ3YTExLjcgMTEuNyAwIDAgMCAzLjIzNSAyLjYzN2wuMzcyLjE5N2E3MiA3MiAwIDAgMCA3LjU1NiAzLjUyYTc1IDc1IDAgMCAxIDE2LjQgNy44MTRhMjQuOTQgMjQuOTQgMCAwIDEgOC40MTYgOC44NDVhMjMuNiAyMy42IDAgMCAxIDIuNDkgMTAuOTlhMjQuNyAyNC43IDAgMCAxLTQuMTIyIDE0LjE2OWEyNy4xIDI3LjEgMCAwIDEtMTEuOTM2IDkuNTNxLTcuNTU2IDMuMzItMTguNTU3IDMuNDMybC0uNzYyLjAwNGE3MCA3MCAwIDAgMS0xMy41NTYtMS4xODhsLS45NTYtLjE4NmE0Ni4zIDQ2LjMgMCAwIDEtMTAuOTA1LTMuNDM1YTIuMjIgMi4yMiAwIDAgMS0xLjIwMi0xLjg5di0xOC43MThhMS4wMSAxLjAxIDAgMCAxIC40My0uOTQ1YS44My44MyAwIDAgMSAuOTQ0LjA4NmE0NS45IDQ1LjkgMCAwIDAgMTMuMjIzIDUuMjM4YTU0LjUgNTQuNSAwIDAgMCAxMi41MzcgMS42MzJxNi4wMDkgMCA4Ljg0NC0xLjU0NmE0Ljg2IDQuODYgMCAwIDAgMi44MzQtNC40NjVxMC0yLjIzLTIuNTc2LTQuMjkzcS0xLjA4LS44NjQtMy4wOTctMS44OGwtLjY0My0uMzE2bC0uNjg2LS4zMjNsLS4zNi0uMTY0bC0uNzU0LS4zMzRsLS4zOTMtLjE3bC0uODItLjM0NGwtLjQyNy0uMTc1bC0uODg2LS4zNTVsLS40Ni0uMThsLS45NTMtLjM2N2wtLjk5Ny0uMzczYTYzIDYzIDAgMCAxLTE1LjE5OS03LjcyOGEyNi4yIDI2LjIgMCAwIDEtOC4wNzEtOS4wMTZhMjMuNyAyMy43IDAgMCAxLTIuNDktMTAuOTA1YTI0LjYgMjQuNiAwIDAgMSAzLjYwNi0xMi44OGMyLjctNC4yNyA2LjU3Ni03LjY3IDExLjE2My05Ljc4OHE3LjU1NS0zLjc3NiAxOC44OS0zLjc3OWE4My42IDgzLjYgMCAwIDEgMTMuMjI0Ljk0NWEzNC43IDM0LjcgMCAwIDEgOS4yMDYgMi40OWMuNDczLjEzNi44NTQuNDg1IDEuMDMuOTQ1Yy4xMTcuNDE5LjE3NC44NTIuMTcyIDEuMjg4djE3LjM0NWMuMDI1LjQxLS4xNzIuODAzLS41MTUgMS4wM2ExLjY2IDEuNjYgMCAwIDEtMS40NzggMCIvPjwvc3ZnPg==", "CapCut": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjMDAwIiBkPSJNNTEyIDEzOC40VjU4LjVsLTk2IDUwLjR2LTNjMC0zMS44LTIyLjgtNTEtNTUuOC01MUg1NS44QzIxIDU0LjkgMCA3NC4xIDAgMTA2djgwLjRMMTM0LjQgMjU2IDAgMzI2LjJ2ODAuNEMwIDQzNy44IDIxIDQ1NyA1NS44IDQ1N2gzMDQuM2MzMyAwIDU1LjgtMTkuMiA1NS44LTUwLjR2LTQuMmw5NiA1MXYtODFMMjg4LjcgMjU2ek0yMTEuMyAyOTUuNmwxNjUuMSA4Ni41SDQ1LjZ6TTM3NS4yIDEzMGwtMTYzLjkgODUuOEw0NS42IDEzMHoiLz48L3N2Zz4="};
+const FLAGS=["Français","Anglais","Vietnamien"];
+const lgImg=t=>LG[t]?`<img class="lg${FLAGS.includes(t)?" flag":""}" src="${LG[t]}" alt="" aria-hidden="true">`:"";
+const tagT=a=>a.map(t=>`<span class="tag ${TL[t]||""}">${lgImg(t)}${esc(t)}</span>`).join("");
+document.querySelectorAll(".prop .tag").forEach(el=>{const t=el.dataset.t||el.textContent.trim();if(LG[t]&&!el.querySelector(".lg"))el.insertAdjacentHTML("afterbegin",lgImg(t))});
+/* Option C banners: icon + label on the stage colour; a preview image fades in on hover (desktop) */
+const BI={"recrutement":["b-flow","Démo Notion"],"conges-slack":["b-chat","Démo Slack"],"okrs-slack":["i-up","Démo Slack"],"starting-guide":["b-chat","Démo Slack"],"calendrier-presta":["i-cal","Démo Notion"],"easyform":["i-award","Top 3 · track Qualcomm"],"rodier":["b-mega","Persona et plan média"],"merch":["b-gift","Design et production"],"penshow":["i-cal","Kit de 32 visuels"],"site":["b-globe","Site web · 2 pages"]};
+const OFFSITE=/^https?:$/.test(location.protocol)&&!/claude|anthropic/i.test(location.hostname);
+function thumb(m){
+ const b=BI[m.id]||["b-tool",m.n],c=m.cover;
+ const pv=c.img||(OFFSITE&&m.yt?`https://i.ytimg.com/vi/${m.yt[0][0]}/hqdefault.jpg`:"");
+ return `<div class="thumb tint st-${m.s[0]}"><svg class="bico" aria-hidden="true"><use href="#${b[0]}"/></svg><span class="kick tid">${esc(m.tid)}</span><span class="tst">✓ ${esc(m.st)}</span><span class="blab">${esc(b[1])}</span>${pv?`<img class="pv" src="${pv}" alt="" loading="lazy" onerror="this.remove()">`:""}</div>`;
+}
+const R1={"okrs-slack":["0 → Slack","un suivi des OKRs là où il n'y en avait aucun"],"conges-slack":["100 %","d'adoption, sans nouvelle licence"],"site":["2 ans","d'attente, relancé par ma maquette et adopté"],"starting-guide":["Notion → Slack","pour réduire les coûts de licence"],"calendrier-presta":["0 → 100 %","des absences sur un process standardisé"],"recrutement":["2 324","candidatures, +47 % d'effectif en un an"],"merch":["220","goodies livrés en 2 semaines"],"penshow":["32","visuels pour tout l'événement"],"easyform":["Top 3","du track Qualcomm, sur 922 équipes"]};
+const r1=m=>R1[m.id]?`<span class="r1"><svg aria-hidden="true"><use href="#i-up"/></svg><span><strong>${esc(R1[m.id][0])}</strong> ${esc(R1[m.id][1])}</span></span>`:"";
+const card=(m,withTags)=>`<button type="button" class="card" data-id="${m.id}">${thumb(m)}<span class="cb"><b>${esc(m.n)}</b><span class="line">${esc(m.one)}</span><span class="tools">${tagT(m.tools)}</span>${r1(m)}${withTags?`<span class="tags">${tagS(m)}</span>`:""}</span></button>`;
+const db=document.getElementById("db");
+let view="etape";
+const CLOSED=new Set(ROLES.map(r=>r[0]));
+/* every board card gets the height of the tallest one (desktop only) */
+function eqCards(){
+ const cs=[...document.querySelectorAll("#db .board .card")];
+ cs.forEach(c=>c.style.height="");
+ if(!cs.length||matchMedia("(max-width:760px)").matches)return;
+ const h=Math.max(...cs.map(c=>c.offsetHeight));
+ cs.forEach(c=>c.style.height=h+"px");
+}
+let eqT;addEventListener("resize",()=>{clearTimeout(eqT);eqT=setTimeout(eqCards,120)});
+/* each soft skill keeps one colour everywhere, like a Notion multi-select */
+const SK_PAL=["tl-google","tl-canva","tl-slack","tl-tally","tl-photoshop","tl-capcut","tl-ms","tl-notion","red"];
+const SK_MAP={};Object.values(SOFT).flat().forEach(k=>{if(!(k in SK_MAP))SK_MAP[k]=SK_PAL[Object.keys(SK_MAP).length%SK_PAL.length]});
+const skillCls=k=>SK_MAP[k]||"";
+function render(){
+ if(view==="etape"){
+  db.innerHTML=`<div class="board">${STAGES.map(s=>{const it=M.filter(m=>m.s.includes(s));return `<div class="col" data-cat="${s}"><div class="col-h"><span class="ep">Epic</span><span class="tag ${s}">${SL[s]}</span>${it.length}<span class="cnote">${SN[s]}</span></div>${it.map(m=>card(m,false)).join("")}</div>`}).join("")}</div>`;
+ }else if(view==="galerie"){
+  db.innerHTML=`<div class="gallery">${M.map(m=>card(m,true)).join("")}</div>`;
+ }else{
+  db.innerHTML=`<div class="tablewrap"><table><thead><tr><th>ID</th><th>Projet</th><th>Type</th><th>Mon rôle</th><th>Outils</th><th>Résultats</th></tr></thead>${STAGES.map(st=>{const it=M.filter(m=>m.s.includes(st));return `<tbody class="${CLOSED.has(st)?"shut":""}"><tr class="grp"><th colspan="6" scope="rowgroup" data-role="${st}"><button type="button" class="gtog" aria-expanded="${CLOSED.has(st)?"false":"true"}"><span class="car" aria-hidden="true"></span><span class="tag ${st}">${SL[st]}</span><span class="n">${it.length}</span></button></th></tr>${it.map(m=>`<tr data-id="${m.id}" tabindex="0"><td class="dim mono">${esc(m.tid)}</td><td class="t1">${esc(m.n)}</td><td><span class="tag">${esc(m.ty||"")}</span></td><td class="dim role">${esc(m.role||"")}</td><td>${tagT(m.tools)}</td><td class="dim">${resCell(m)}</td></tr>`).join("")}</tbody>`}).join("")}</table></div>`;
+ }
+ eqCards();
+ db.querySelectorAll(".gtog").forEach(bt=>bt.addEventListener("click",()=>{const tb=bt.closest("tbody"),r=bt.parentElement.dataset.role,shut=tb.classList.toggle("shut");bt.setAttribute("aria-expanded",shut?"false":"true");shut?CLOSED.add(r):CLOSED.delete(r)}));
+ db.querySelectorAll("[data-id]").forEach(el=>{
+  el.addEventListener("click",()=>openPeek(el.dataset.id));
+  if(el.tagName==="TR")el.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();openPeek(el.dataset.id)}});
+ });
+}
+document.querySelectorAll(".views button").forEach(b=>b.addEventListener("click",()=>{
+ view=b.dataset.v;document.querySelectorAll(".views button").forEach(x=>x.setAttribute("aria-selected",x===b?"true":"false"));render();
+ try{localStorage.setItem("pn-view",view)}catch(e){}
+}));
+render();
+document.querySelectorAll(".rlink").forEach(b=>b.addEventListener("click",()=>{
+ if(b.dataset.role){
+  document.getElementById("v-tableau").click();
+  const th=db.querySelector(`tr.grp th[data-role="${b.dataset.role}"]`);
+  if(!th)return;
+  const tb=th.closest("tbody");if(tb.classList.contains("shut")){th.querySelector(".gtog").click()}
+  th.scrollIntoView({block:"start"});
+  th.classList.add("flash");setTimeout(()=>th.classList.remove("flash"),1600);
+  return;
+ }
+ document.getElementById("v-etape").click();
+ const col=db.querySelector(`.col[data-cat="${b.dataset.cat}"]`);
+ if(!col)return;
+ col.scrollIntoView({block:"start"});
+ col.classList.add("flash");setTimeout(()=>col.classList.remove("flash"),1600);
+}));
+
+const peek=document.getElementById("peek"),scrim=document.getElementById("scrim"),pkBody=document.getElementById("pk-body");
+let lastFocus=null;
+const GK={"Hiring Hub":"hiring","Onboarding dans Slack":"onboarding","Calendrier des prestataires":"contractors","Entretien annuel":"annual","Congés dans Slack":"pto","OKRs dans Slack":"okr"};
+const GUIDES={"hiring": "<p class=\"gcr\">Notion <span>›<\/span> Espace RH <span>›<\/span> Hiring Hub<\/p><p>Le Hiring Hub regroupe toutes les étapes du recrutement au même endroit, en trois cartes. Chaque carte indique à qui elle s'adresse et à quoi elle sert.<\/p><figure><img src=\"guides/hiring-00.jpg\" alt=\"Accueil du Hiring Hub : ① Hiring brief, ② ATS (suivi des candidats), ③ Talent pool.\" loading=\"lazy\"><figcaption>Accueil du Hiring Hub : ① Hiring brief, ② ATS (suivi des candidats), ③ Talent pool.<\/figcaption><\/figure><div class=\"gtw\"><table class=\"gt\"><thead><tr><th>Carte<\/th><th>Pour qui<\/th><th>À quoi elle sert<\/th><\/tr><\/thead><tbody><tr><td>① Hiring brief, JD, Scorecard<\/td><td>Manager recruteur<\/td><td>Remplir le brief avant l'ouverture du poste.<\/td><\/tr><tr><td>② Applicant Trackers (ATS)<\/td><td>RH<\/td><td>Suivre toutes les candidatures, poste par poste.<\/td><\/tr><tr><td>③ Talent Pool<\/td><td>RH<\/td><td>Retrouver d'anciens candidats ou des candidatures spontanées.<\/td><\/tr><\/tbody><\/table><\/div><h5>① Rédiger un brief de recrutement<span class=\"who\">Managers recruteurs<\/span><\/h5><p>Les briefs sont classés par département. Pour en créer un, cliquer sur la petite flèche à côté de <b>New<\/b>, choisir le modèle <b>Hiring Brief [Job_Title]<\/b> (modèle par défaut), puis le renommer avec l'intitulé du poste.<\/p><figure><img src=\"guides/hiring-01.jpg\" alt=\"Base HIRING BRIEF, regroupée par département (vue « Per department »).\" loading=\"lazy\"><figcaption>Base HIRING BRIEF, regroupée par département (vue « Per department »).<\/figcaption><\/figure><figure><img src=\"guides/hiring-02.jpg\" alt=\"New ▾ › Templates for HIRING BRIEF › Hiring Brief [Job_Title].\" loading=\"lazy\"><figcaption>New ▾ › Templates for HIRING BRIEF › Hiring Brief [Job_Title].<\/figcaption><\/figure><p>Le modèle guide le manager en huit sections :<\/p><ol class=\"gs\"><li>Présentation du poste (date de début, contrat, lieu, fourchette de salaire, raison du recrutement)<\/li><li>Expérience et séniorité<\/li><li>Résultats attendus (à 6 et 12 mois)<\/li><li>Compétences techniques<\/li><li>Savoir-être et adéquation culturelle<\/li><li>Ce que nous offrons et motivations recherchées<\/li><li>Processus de recrutement<\/li><li>Notes libres<\/li><\/ol><p>La fiche de poste est ensuite générée à partir du brief (champ <b>JD Generated<\/b>).<\/p><figure><img src=\"guides/hiring-03.jpg\" alt=\"Exemple de brief (salaire flouté).\" loading=\"lazy\"><figcaption>Exemple de brief (salaire flouté).<\/figcaption><\/figure><h5>② Suivre les candidats (ATS)<span class=\"who\">RH<\/span><\/h5><p>Ouvrir le volet du département et cliquer sur le bouton du poste (par exemple <b>➕ Senior SWE<\/b>) pour accéder à son suivi. Le tableau Applicant Tracker liste chaque poste avec son statut, ses dates, son formulaire de candidature Tally et son brief associé.<\/p><figure><img src=\"guides/hiring-04.jpg\" alt=\"Applicant Trackers : boutons des postes par département.\" loading=\"lazy\"><figcaption>Applicant Trackers : boutons des postes par département.<\/figcaption><\/figure><figure><img src=\"guides/hiring-05.jpg\" alt=\"Tableau Applicant Tracker : statut (Not started, In progress, Done), formulaire Tally et brief associé.\" loading=\"lazy\"><figcaption>Tableau Applicant Tracker : statut (Not started, In progress, Done), formulaire Tally et brief associé.<\/figcaption><\/figure><p>Chaque poste a sa propre page de suivi. Les candidats y apparaissent sous forme de cartes, classées par étape d'entretien, avec leur score AssessFirst, leur scorecard et des cases à cocher pour les invitations.<\/p><figure><img src=\"guides/hiring-06.jpg\" alt=\"Page de suivi d&#x27;un poste, avec son bandeau d&#x27;avertissement.\" loading=\"lazy\"><figcaption>Page de suivi d'un poste, avec son bandeau d'avertissement.<\/figcaption><\/figure><div class=\"gnote\"><b>Ne pas changer l'étape d'un candidat à la main.<\/b> Comme l'indique le bandeau, les étapes sont gérées automatiquement : ne pas déplacer les cartes entre colonnes.<\/div><figure><img src=\"guides/hiring-07.jpg\" alt=\"Tableau des candidats par étape (noms floutés).\" loading=\"lazy\"><figcaption>Tableau des candidats par étape (noms floutés).<\/figcaption><\/figure><h5>③ Consulter le vivier de talents<span class=\"who\">RH<\/span><\/h5><p>Le Talent Pool contient tous les candidats des 24 derniers mois, classés par département. La vue par défaut affiche les candidatures spontanées ; la vue <b>All Data<\/b> affiche tout le monde, avec des filtres par formulaire ou date.<\/p><figure><img src=\"guides/hiring-08.jpg\" alt=\"Talent Pool (données des candidats floutées).\" loading=\"lazy\"><figcaption>Talent Pool (données des candidats floutées).<\/figcaption><\/figure>", "onboarding": "<p class=\"gcr\">Slack <span>›<\/span> section 💙 Onboarding Hub <span>›<\/span> #prenom-onboarding<\/p><p>Chaque nouvel arrivant dispose d'un canal privé : un onglet <b>Messages<\/b> pour poser ses questions et un onglet de tâches (une Slack List) avec toute sa feuille de route d'intégration.<\/p><h5>Étape 1 · Créer le canal avec le workflow<span class=\"who\">RH<\/span><\/h5><ol class=\"gs\"><li>Ouvrir le canvas <b>👋 How to create an Onboarding channel<\/b> et cliquer sur <b>Start Workflow<\/b>, puis remplir le court formulaire.<figure><img src=\"guides/onboarding-00.jpg\" alt=\"Le canvas « How to create an Onboarding channel » et son bouton Start Workflow.\" loading=\"lazy\"><figcaption>Le canvas « How to create an Onboarding channel » et son bouton Start Workflow.<\/figcaption><\/figure><\/li><li>Le workflow crée un canal privé <b>onboarding-&lt;date&gt;<\/b>, définit le sujet « onboarding », puis publie et épingle un message de bienvenue avec deux boutons : <b>Read the Guide<\/b> et <b>Book a 30min meeting<\/b> (pour rencontrer ses collègues).<figure><img src=\"guides/onboarding-01.jpg\" alt=\"En coulisses : le workflow envoie le message de bienvenue, l&#x27;épingle, puis envoie l&#x27;invitation à la réunion de 30 minutes.\" loading=\"lazy\"><figcaption>En coulisses : le workflow envoie le message de bienvenue, l'épingle, puis envoie l'invitation à la réunion de 30 minutes.<\/figcaption><\/figure><\/li><li>Renommer le canal en <b>prenom-onboarding<\/b>, ajouter le nouvel arrivant, son manager et son buddy, puis le ranger dans la section Onboarding Hub.<\/li><\/ol><h5>Étape 2 · Ajouter le modèle d'onboarding<span class=\"who\">RH<\/span><\/h5><ol class=\"gs\"><li>Dans le canal, cliquer sur <b>+<\/b> dans la barre d'onglets, puis sur <b>Explore more templates<\/b>.<figure><img src=\"guides/onboarding-02.jpg\" alt=\"Menu « + » de la barre d&#x27;onglets › Explore more templates.\" loading=\"lazy\"><figcaption>Menu « + » de la barre d'onglets › Explore more templates.<\/figcaption><\/figure><\/li><li>Choisir le modèle correspondant au poste (par exemple <b>[Onboarding] Engineering<\/b> ou <b>QA onboarding<\/b>), vérifier l'aperçu et cliquer sur <b>Next<\/b>.<figure><img src=\"guides/onboarding-03.jpg\" alt=\"Choix du modèle ; l&#x27;aperçu montre l&#x27;onglet de tâches qui sera ajouté.\" loading=\"lazy\"><figcaption>Choix du modèle ; l'aperçu montre l'onglet de tâches qui sera ajouté.<\/figcaption><\/figure><\/li><\/ol><figure><img src=\"guides/onboarding-04.jpg\" alt=\"Exemple d&#x27;onglet de tâches après application du modèle : les tâches sont floutées, seuls les groupes d&#x27;étapes sont visibles.\" loading=\"lazy\"><figcaption>Exemple d'onglet de tâches après application du modèle : les tâches sont floutées, seuls les groupes d'étapes sont visibles.<\/figcaption><\/figure><h5>Étape 3 · Utilisation par le nouvel arrivant<span class=\"who\">Nouveaux arrivants<\/span><\/h5><p><b>Onglet Messages.<\/b> Pour toutes les questions : organisation, administratif, outils. Les RH, le manager et le buddy sont dans le canal. Le message épinglé renvoie vers le guide et une réunion de présentation.<\/p><figure><img src=\"guides/onboarding-05.jpg\" alt=\"Onglet Messages : message de bienvenue épinglé avec « Read the Guide » et « Book a 30min meeting ».\" loading=\"lazy\"><figcaption>Onglet Messages : message de bienvenue épinglé avec « Read the Guide » et « Book a 30min meeting ».<\/figcaption><\/figure><p><b>Onglet d'onboarding.<\/b> La feuille de route, regroupée par étape (par exemple 0. Rapport d'étonnement, 1. Mes premières semaines…). Chaque tâche comporte :<\/p><div class=\"gtw\"><table class=\"gt\"><thead><tr><th>Colonne<\/th><th>Signification<\/th><\/tr><\/thead><tbody><tr><td>Task<\/td><td>Ce qu'il faut faire. Cocher le cercle une fois terminé. Un compteur « 1/2 » indique des sous-tâches.<\/td><\/tr><tr><td>File<\/td><td>Le guide ou document nécessaire.<\/td><\/tr><tr><td>Status<\/td><td>Not started, In progress ou Done.<\/td><\/tr><tr><td>Checkpoint<\/td><td>L'étape de l'onboarding à laquelle appartient la tâche.<\/td><\/tr><tr><td>Propriétaire<\/td><td>Le responsable de la tâche.<\/td><\/tr><tr><td>Échéance<\/td><td>Date limite, calculée automatiquement : personne n'a à saisir les dates.<\/td><\/tr><tr><td>Canal<\/td><td>Le canal Slack concerné, le cas échéant.<\/td><\/tr><\/tbody><\/table><\/div><figure><img src=\"guides/onboarding-06.jpg\" alt=\"Onglet d&#x27;onboarding : tâches par étape, avec échéances automatiques.\" loading=\"lazy\"><figcaption>Onglet d'onboarding : tâches par étape, avec échéances automatiques.<\/figcaption><\/figure>", "contractors": "<p class=\"gcr\">Notion <span>›<\/span> Espace RH <span>›<\/span> 🌴 Contractors Calendar<\/p><p>Une page unique où les prestataires demandent leurs congés et où les managers les valident. Elle contient un mode d'emploi (un volet pour les prestataires, un pour les managers), le formulaire de demande et le calendrier des absences validées. Un calendrier des jours fériés se trouve plus bas sur la page.<\/p><figure><img src=\"guides/contractors-00.jpg\" alt=\"La page : mode d&#x27;emploi en haut, formulaire à gauche, calendrier de l&#x27;équipe à droite.\" loading=\"lazy\"><figcaption>La page : mode d'emploi en haut, formulaire à gauche, calendrier de l'équipe à droite.<\/figcaption><\/figure><div class=\"gflow\"><div><b>1 · Prestataire<\/b><span>Envoie le formulaire de demande<\/span><\/div><div><b>2 · E-mail automatique<\/b><span>Confirmation au prestataire, lien d'action au manager<\/span><\/div><div><b>3 · Manager<\/b><span>Clique sur Approve ou Deny<\/span><\/div><div><b>4 · E-mail automatique<\/b><span>Décision envoyée ; l'absence validée apparaît dans le calendrier<\/span><\/div><\/div><h5>Côté prestataire : faire une demande<span class=\"who\">Prestataires<\/span><\/h5><ol class=\"gs\"><li>Ouvrir la page <b>🌴 Contractors Calendar<\/b>.<\/li><li>Remplir le formulaire : nom, e-mail professionnel, nom et e-mail du manager, date de début et de fin.<figure><img src=\"guides/contractors-01.jpg\" alt=\"Le formulaire (à gauche) et le calendrier où apparaissent les demandes validées (à droite).\" loading=\"lazy\"><figcaption>Le formulaire (à gauche) et le calendrier où apparaissent les demandes validées (à droite).<\/figcaption><\/figure><\/li><li><b>Half-day?<\/b> Choisir AM ou PM uniquement pour une demande d'un seul jour. Si des congés longs commencent ou finissent par une demi-journée, la déclarer dans une demande séparée.<\/li><li>Cliquer sur <b>Submit<\/b>.<figure><img src=\"guides/contractors-02.jpg\" alt=\"Bas du formulaire : option demi-journée et bouton Submit.\" loading=\"lazy\"><figcaption>Bas du formulaire : option demi-journée et bouton Submit.<\/figcaption><\/figure><\/li><li>Un e-mail de confirmation arrive immédiatement, puis un second e-mail avec la décision du manager.<\/li><\/ol><h5>Côté manager : valider ou refuser<span class=\"who\">Managers<\/span><\/h5><ol class=\"gs\"><li>Le manager reçoit un e-mail à chaque nouvelle demande et clique sur le lien.<\/li><li>Il clique sur <b>Approve<\/b> ou <b>Deny<\/b>. Le prestataire est prévenu automatiquement par e-mail.<\/li><\/ol><h5>Notifications e-mail automatiques<\/h5><p>Tous les e-mails sont envoyés par une automatisation Notion (mention « Sent via Notion Automations »). Il ne faut pas y répondre.<\/p><div class=\"gtw\"><table class=\"gt\"><thead><tr><th>Quand<\/th><th>Objet de l'e-mail<\/th><th>Destinataires<\/th><th>Contenu<\/th><\/tr><\/thead><tbody><tr><td>Demande envoyée<\/td><td>Leave Request Submitted [Nom · dates]<\/td><td>Prestataire, manager, RH<\/td><td>Confirme les dates et que la demande est en cours d'examen. La partie manager contient le lien New submission pour agir.<\/td><\/tr><tr><td>Demande validée<\/td><td>Leave Request Approved [Nom · dates]<\/td><td>Prestataire (manager et RH en copie)<\/td><td>Qui a validé, les dates, le nombre de jours et un rappel de préparer la passation.<\/td><\/tr><tr><td>Demande validée<\/td><td>&lt;Nom&gt; Time Off Balance Notification<\/td><td>Prestataire (RH en copie)<\/td><td>Droits à congés totaux et solde restant.<\/td><\/tr><tr><td>Demande refusée<\/td><td>Leave Request Declined [Nom · dates]<\/td><td>Prestataire et manager (RH en copie)<\/td><td>Le refus de la demande, avec le détail des dates.<\/td><\/tr><\/tbody><\/table><\/div><div class=\"g2\"><figure><img src=\"guides/contractors-03.jpg\" alt=\"Demande envoyée : confirmation au prestataire et lien d&#x27;action pour le manager.\" loading=\"lazy\"><figcaption>Demande envoyée : confirmation au prestataire et lien d'action pour le manager.<\/figcaption><\/figure><figure><img src=\"guides/contractors-04.jpg\" alt=\"Demande validée.\" loading=\"lazy\"><figcaption>Demande validée.<\/figcaption><\/figure><figure><img src=\"guides/contractors-05.jpg\" alt=\"Solde de congés (chiffres masqués).\" loading=\"lazy\"><figcaption>Solde de congés (chiffres masqués).<\/figcaption><\/figure><figure><img src=\"guides/contractors-06.jpg\" alt=\"Demande refusée.\" loading=\"lazy\"><figcaption>Demande refusée.<\/figcaption><\/figure><\/div>", "annual": "<p class=\"gcr\">Notion <span>›<\/span> Espace RH <span>›<\/span> Annual Review <span>›<\/span> ☀️ Annual Review<\/p><p>L'entretien annuel repose sur trois formulaires. Chacun choisit celui qui correspond à son rôle. On peut répondre en français ou en anglais.<\/p><figure><img src=\"guides/annual-00.jpg\" alt=\"Point de départ : « I am an Employee », « I am a Manager » ou « I am a colleague ».\" loading=\"lazy\"><figcaption>Point de départ : « I am an Employee », « I am a Manager » ou « I am a colleague ».<\/figcaption><\/figure><div class=\"gtw\"><table class=\"gt\"><thead><tr><th>Formulaire<\/th><th>Rempli par<\/th><th>Contenu<\/th><\/tr><\/thead><tbody><tr><td>💻 I am an Employee<\/td><td>Le salarié, sur lui-même<\/td><td>Nom, e-mail, e-mail du manager, puis 10 questions : atteinte des objectifs (6 derniers mois), réussites, difficultés, épanouissement, objectifs des 6 prochains mois, besoins (outils, formation…), projection, ce que le manager doit continuer, ce qu'il faut améliorer, autres sujets.<\/td><\/tr><tr><td>💼 I am a Manager<\/td><td>Le manager, pour chaque collaborateur<\/td><td>Les mêmes thèmes du point de vue du manager : atteinte des objectifs, réussites, difficultés observées, engagement et objectifs prioritaires.<\/td><\/tr><tr><td>🥖 I am a colleague<\/td><td>Les pairs sollicités<\/td><td>E-mail du collègue évalué et de son manager, puis des affirmations sur la qualité du travail, l'expertise, la gestion du temps, la communication et l'entraide.<\/td><\/tr><\/tbody><\/table><\/div><div class=\"g3\"><figure><img src=\"guides/annual-01.jpg\" alt=\"💻 Formulaire salarié\" loading=\"lazy\"><figcaption>💻 Formulaire salarié<\/figcaption><\/figure><figure><img src=\"guides/annual-02.jpg\" alt=\"💼 Formulaire manager\" loading=\"lazy\"><figcaption>💼 Formulaire manager<\/figcaption><\/figure><figure><img src=\"guides/annual-03.jpg\" alt=\"🥖 Formulaire des pairs\" loading=\"lazy\"><figcaption>🥖 Formulaire des pairs<\/figcaption><\/figure><\/div><h5>Après l'envoi<\/h5><div class=\"gflow\"><div><b>Formulaire salarié<\/b><span>Envoyé par le salarié<\/span><\/div><div><b>E-mail automatique<\/b><span>Copie des réponses au salarié et à son manager<\/span><\/div><div><b>Formulaire manager<\/b><span>Envoyé par le manager<\/span><\/div><div><b>E-mail automatique<\/b><span>Copie des réponses au manager<\/span><\/div><div><b>Débrief terminé<\/b><span>Le salarié reçoit le retour du manager<\/span><\/div><\/div><ol class=\"gs\"><li>Le salarié envoie son formulaire. Une copie des réponses est envoyée au salarié et à son manager.<\/li><li>Le manager envoie son formulaire. Une copie des réponses lui est envoyée en confirmation.<\/li><li>L'entretien de débrief a lieu. Quand les RH le marquent comme terminé, le salarié reçoit par e-mail le retour de son manager.<\/li><\/ol><h5>Notifications e-mail automatiques<\/h5><p>Tous les e-mails sont envoyés par des automatisations Notion (« Sent via Notion Automations »), avec les RH en copie.<\/p><div class=\"gtw\"><table class=\"gt\"><thead><tr><th>Déclencheur<\/th><th>Objet de l'e-mail<\/th><th>Destinataires<\/th><th>Contenu<\/th><\/tr><\/thead><tbody><tr><td>Le salarié envoie son formulaire<\/td><td>Confirmation: &lt;Salarié&gt;'s Annual Review Submission<\/td><td>Salarié et manager<\/td><td>Confirme l'envoi et reprend toutes les réponses du salarié.<\/td><\/tr><tr><td>Le manager envoie son formulaire<\/td><td>Following &lt;Salarié&gt; Annual Review Debrief Meeting<\/td><td>Manager<\/td><td>Confirme l'enregistrement, reprend ses réponses et l'invite à préparer le débrief.<\/td><\/tr><tr><td>Un collègue envoie son feedback<\/td><td>&lt;Collègue&gt; Feedback submitted: Annual Review<\/td><td>Le collègue<\/td><td>Confirme l'enregistrement du feedback, avec les réponses.<\/td><\/tr><tr><td>Les RH marquent le débrief comme terminé<\/td><td>Annual Review: Feedback from your manager<\/td><td>Salarié<\/td><td>Remercie pour l'entretien et partage les réponses du manager.<\/td><\/tr><\/tbody><\/table><\/div><div class=\"g2\"><figure><img src=\"guides/annual-04.jpg\" alt=\"Envoi du salarié : confirmation au salarié et à son manager.\" loading=\"lazy\"><figcaption>Envoi du salarié : confirmation au salarié et à son manager.<\/figcaption><\/figure><figure><img src=\"guides/annual-05.jpg\" alt=\"Envoi du manager : confirmation et préparation du débrief.\" loading=\"lazy\"><figcaption>Envoi du manager : confirmation et préparation du débrief.<\/figcaption><\/figure><figure><img src=\"guides/annual-06.jpg\" alt=\"Feedback d&#x27;un pair : confirmation de l&#x27;enregistrement.\" loading=\"lazy\"><figcaption>Feedback d'un pair : confirmation de l'enregistrement.<\/figcaption><\/figure><figure><img src=\"guides/annual-07.jpg\" alt=\"Après le débrief : le salarié reçoit le retour final.\" loading=\"lazy\"><figcaption>Après le débrief : le salarié reçoit le retour final.<\/figcaption><\/figure><\/div><div class=\"gnote\"><b>Annual Review: Personal Dashboard<\/b> (sous les trois boutons) n'affiche que les entretiens qui vous concernent.<\/div><h5>En coulisses<span class=\"who\">RH<\/span><\/h5><p>Chaque formulaire crée une page dans l'une des trois bases : <b>For employees<\/b> et <b>For managers<\/b> (regroupées par manager) et <b>Peer feedback<\/b> (regroupée par salarié). Les RH modifient les questions dans la vue Form builder.<\/p><figure><img src=\"guides/annual-08.jpg\" alt=\"« Annual Review, For employees », regroupé par manager (noms floutés).\" loading=\"lazy\"><figcaption>« Annual Review, For employees », regroupé par manager (noms floutés).<\/figcaption><\/figure><figure><img src=\"guides/annual-09.jpg\" alt=\"Bases « For managers » et « Peer feedback ».\" loading=\"lazy\"><figcaption>Bases « For managers » et « Peer feedback ».<\/figcaption><\/figure>", "pto": "<p class=\"gcr\">Slack <span>›<\/span> workflow PTO request <span>›<\/span> Google Agenda<\/p><p>Les congés se demandent via un court formulaire Slack. Le manager valide ou refuse directement dans Slack, tout le monde est notifié automatiquement et les congés validés s'ajoutent à Google Agenda.<\/p><div class=\"gflow\"><div><b>1 · Salarié<\/b><span>Lance le workflow et remplit le formulaire<\/span><\/div><div><b>2 · Manager<\/b><span>Reçoit un message privé et clique sur Respond<\/span><\/div><div><b>3 · Canal congés<\/b><span>Un récapitulatif de la demande et de la décision est publié<\/span><\/div><div><b>4 · Salarié<\/b><span>Reçoit la décision et un lien vers l'agenda<\/span><\/div><div><b>5 · Google Agenda<\/b><span>Le congé validé est ajouté à l'agenda partagé<\/span><\/div><\/div><h5>Côté salarié : demander un congé<span class=\"who\">Tous<\/span><\/h5><ol class=\"gs\"><li>Ouvrir le lien du workflow <b>PTO request<\/b> et cliquer sur <b>Start<\/b>.<\/li><li>Remplir : PTO start date, PTO end date, Who is your manager?, Notes (facultatif) et Half-day? (AM ou PM, pour un seul jour). Puis envoyer.<\/li><li>Un message privé indique si la demande est validée ou refusée, avec deux boutons : <b>See your request on calendar<\/b> et <b>Submit a new request<\/b>.<\/li><\/ol><h5>Côté manager : valider ou refuser<span class=\"who\">Managers<\/span><\/h5><ol class=\"gs\"><li>Le manager reçoit un message privé : « [Name] is requesting PTO. Please approve or deny. », avec les dates et les notes.<\/li><li>Il clique sur <b>Respond<\/b>, choisit <b>Approve<\/b> ou <b>Deny<\/b>, ajoute une note si besoin et valide. Le salarié et le canal sont mis à jour automatiquement.<\/li><\/ol><figure><img src=\"guides/pto-00.jpg\" alt=\"Le canal des congés : chaque demande est enregistrée avec ses dates, la demi-journée, et qui l&#x27;a validée ou refusée.\" loading=\"lazy\"><figcaption>Le canal des congés : chaque demande est enregistrée avec ses dates, la demi-journée, et qui l'a validée ou refusée.<\/figcaption><\/figure><h5>Congés validés dans Google Agenda<\/h5><p>Une fois validée, la demande est ajoutée automatiquement à l'agenda Google partagé sous la forme d'un événement <b>PTO, &lt;Nom&gt;<\/b>. Les journées complètes apparaissent en « toute la journée » et les demi-journées en bloc matin ou après-midi. Le bouton <b>See your request on calendar<\/b> ouvre cet agenda. Les demandes refusées n'y figurent pas.<\/p><figure><img src=\"guides/pto-01.jpg\" alt=\"L&#x27;agenda partagé : un congé de deux jours et une demi-journée (PM) validés. Noms remplacés.\" loading=\"lazy\"><figcaption>L'agenda partagé : un congé de deux jours et une demi-journée (PM) validés. Noms remplacés.<\/figcaption><\/figure><h5>Fonctionnement de l'automatisation<span class=\"who\">RH<\/span><\/h5><p>Le workflow compte cinq étapes : il recueille la demande, sollicite le manager, recueille sa décision, publie le résultat dans le canal et prévient le salarié.<\/p><div class=\"g2\"><figure><img src=\"guides/pto-02.jpg\" alt=\"Étapes 1 et 2 : formulaire de demande, puis message au manager choisi.\" loading=\"lazy\"><figcaption>Étapes 1 et 2 : formulaire de demande, puis message au manager choisi.<\/figcaption><\/figure><figure><img src=\"guides/pto-03.jpg\" alt=\"Étapes 3 et 4 : formulaire Approve/Deny du manager, puis récapitulatif dans le canal.\" loading=\"lazy\"><figcaption>Étapes 3 et 4 : formulaire Approve/Deny du manager, puis récapitulatif dans le canal.<\/figcaption><\/figure><\/div><figure><img src=\"guides/pto-04.jpg\" alt=\"Étape 5 : le salarié est informé de la décision, avec les liens vers l&#x27;agenda et une nouvelle demande.\" loading=\"lazy\"><figcaption>Étape 5 : le salarié est informé de la décision, avec les liens vers l'agenda et une nouvelle demande.<\/figcaption><\/figure>", "okr": "<p class=\"gcr\">Slack <span>›<\/span> liste privée &lt;Nom&gt; OKR Tasks <span>›<\/span> canvas public 🎯 OKR Dashboard<\/p><p>Les OKR relient le travail de chacun à l'objectif de l'entreprise. Chacun met à jour uniquement sa liste privée ; chaque semaine, Claude lit toutes les listes et met à jour le tableau de bord public.<\/p><div class=\"gflow\"><div><b>1 · Chaque salarié<\/b><span>Met à jour ses tâches et leur statut dans sa liste privée<\/span><\/div><div><b>2 · Claude (hebdo)<\/b><span>Lit toutes les listes privées et calcule l'avancement<\/span><\/div><div><b>3 · Canvas public<\/b><span>Le tableau de bord affiche l'avancement des équipes et de l'entreprise<\/span><\/div><\/div><h5>Étape 1 · Mettre à jour sa liste OKR privée<span class=\"who\">Tous<\/span><\/h5><p>Chaque salarié dispose d'une liste privée <b>&lt;Nom&gt; OKR Tasks<\/b>, visible seulement par lui, son manager et la personne qui compile le tableau de bord. Une ligne par tâche :<\/p><div class=\"gtw\"><table class=\"gt\"><thead><tr><th>Colonne<\/th><th>À renseigner<\/th><th>Exemple<\/th><\/tr><\/thead><tbody><tr><td>Individual KPI<\/td><td>La tâche ou le résultat clé<\/td><td>Mettre en place les OKR dans Slack<\/td><\/tr><tr><td>Team's objectives<\/td><td>L'objectif d'équipe auquel la tâche contribue<\/td><td>Migrer vers Slack<\/td><\/tr><tr><td>Contribution to Team's objectives<\/td><td>Poids de la tâche dans l'objectif (%)<\/td><td>20<\/td><\/tr><tr><td>Status<\/td><td>Not started, In progress ou Done<\/td><td>Done<\/td><\/tr><tr><td>Last Updated<\/td><td>Date de la dernière mise à jour<\/td><td>15/09/2026<\/td><\/tr><\/tbody><\/table><\/div><h5>Étape 2 · Claude met à jour le tableau de bord chaque semaine<span class=\"who\">Managers<\/span><\/h5><p>Rien à publier : chaque semaine, Claude lit les listes privées et recalcule le <b>🎯 OKR Dashboard<\/b>, un canvas public accessible à tous. Il affiche l'avancement global, le poids, le statut et la contribution de chaque équipe, puis les objectifs et membres de chaque équipe.<\/p><figure><img src=\"guides/okr-00.jpg\" alt=\"Le canvas public : objectif de l&#x27;entreprise (flouté), avancement global et tableau des équipes.\" loading=\"lazy\"><figcaption>Le canvas public : objectif de l'entreprise (flouté), avancement global et tableau des équipes.<\/figcaption><\/figure><h5>Les règles<\/h5><figure><img src=\"guides/okr-01.jpg\" alt=\"La règle affichée sur le tableau de bord.\" loading=\"lazy\"><figcaption>La règle affichée sur le tableau de bord.<\/figcaption><\/figure><ul class=\"gl\"><li>Seules trois choses sont saisies à la main : ses propres tâches (dans sa liste privée), le nom de chaque objectif (par le manager de l'équipe) et le poids de chaque équipe (par la direction).<\/li><li>Tout le reste est calculé par Claude : chaque statut et chaque contribution, à tous les niveaux.<\/li><li>Un objectif passe à Done quand toutes ses tâches sont terminées ; sinon il reste « not set yet ».<\/li><li>Une liste vide signifie « pas encore de données », pas une contribution nulle.<\/li><\/ul>"};
+function pagesOf(r){const a=[];for(let n=r[0];n<=r[1];n++)a.push(`rh/p-${String(n).padStart(2,"0")}.jpg`);return a}
+/* YouTube players load only outside claude.ai (e.g. on Netlify); in the claude.ai preview, external frames are blocked, so links are shown instead */
+const YT=/^https?:$/.test(location.protocol)&&!/claude|anthropic/i.test(location.hostname);
+const ytSrc=(id,auto)=>`https://www.youtube-nocookie.com/embed/${id}?rel=0&playsinline=1${auto?"&autoplay=1&mute=1":""}`;
+function peekHtml(m){
+ let h="";
+ const c=m.cover;
+ const dv=(m.parts||[]).find(p=>p.v);
+ const ytb=!dv&&YT&&m.yt?m.yt[0]:null;
+ if(ytb)h+=`<div class="pk-cover vid"><iframe src="${ytSrc(ytb[0],1)}" title="${esc(ytb[1])}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>`;
+ else if(dv)h+=`<div class="pk-cover vid"><video src="${dv.v}" poster="${dv.p}" autoplay muted playsinline controls preload="auto" aria-label="Démo : ${esc(dv.t)}"></video></div>`;
+ /* no demo video: no banner in the panel */
+ h+=`<div class="pk-tk"><span class="tid">${esc(m.tid)}</span><span class="tst">✓ ${esc(m.st)}</span></div><h3 class="ph" id="pk-title">${esc(m.n)}</h3><p class="sub"><span id="pk-sub" aria-hidden="true"></span><span class="caret" id="pk-sub-c" aria-hidden="true"></span><span class="sr">${esc(m.one)}</span></p>`;
+ h+=`<div class="props"><div class="prop"><span class="k">Epic</span><span class="v">${tagS(m)}</span></div><div class="prop"><span class="k">Type</span><span class="v"><span class="tag">${esc(m.ty)}</span></span></div><div class="prop"><span class="k">Responsable</span><span class="v">Phuong Ngo</span></div><div class="prop"><span class="k">Outils</span><span class="v">${tagT(m.tools)}</span></div><div class="prop"><span class="k">Organisation</span><span class="v">${esc(m.org||"Cloudi-Fi")}</span></div></div><hr>`;
+ if(m.ctx)h+=`<div class="pk-sec"><h4>Le contexte</h4><p>${esc(m.ctx)}</p></div>`;
+ if(m.pb)h+=`<div class="pk-sec"><h4>Le problème</h4><p>${esc(m.pb)}</p></div>`;
+ if(m.role)h+=`<div class="pk-sec"><h4>Mon rôle</h4><p>${esc(m.role)}</p></div>`;
+ h+=`<div class="pk-sec"><h4>Ce que j'ai fait</h4><p>${esc(m.did)}</p>${m.items?`<ul>${m.items.map(i=>`<li>${esc(i)}</li>`).join("")}</ul>`:""}</div>`;
+ if(m.imgs)h+=`<div class="pk-sec"><h4>Le pitch deck</h4><div class="pages">${m.imgs.map(i=>`<img src="${i[0]}" alt="${esc(m.n)} : ${esc(i[1])}" loading="lazy">`).join("")}</div></div>`;
+ if(!dv&&!m.imgs&&c.img)h+=`<div class="pk-sec"><h4>En image</h4><img class="pk-photo" src="${c.img}" alt="${esc(m.n)}" loading="lazy"></div>`;
+ if(m.res)h+=`<div class="pk-sec"><h4>Le résultat</h4><div class="res">${m.res.map(r=>`<div><b>${esc(r[0])}</b>${esc(r[1])}</div>`).join("")}</div></div>`;
+ if(m.parts)h+=`<div class="pk-sec"><h4>${m.parts.length>1?"Les outils, en démo":"La démo"}</h4>${m.parts.map((p,i)=>`<details class="part"${i===0?" open":""}><summary><span class="pt"><b>${esc(p.t)}</b><small>${esc(p.d)}</small></span><span class="tag">${esc(p.tool)}</span></summary><div class="pb">${p.v&&p!==dv?`<video src="${p.v}" poster="${p.p}" controls playsinline preload="none" aria-label="Démo : ${esc(p.t)}"></video>`:""}${p.body?`<p style="margin:0;font-size:14px">${esc(p.body)}</p>`:""}${GK[p.t]&&GUIDES[GK[p.t]]?`<div class="gd">${GUIDES[GK[p.t]]}</div>`:""}</div></details>`).join("")}</div>`;
+ if(m.yt&&YT){const rest=m.yt.filter(y=>y!==ytb);if(rest.length)h+=`<div class="pk-sec"><h4>${ytb?(rest.length>1?"Les autres vidéos":"L'autre vidéo"):(rest.length>1?"Les vidéos":"La vidéo")}</h4><div class="yt">${rest.map(y=>`<figure><iframe src="${ytSrc(y[0],0)}" title="${esc(y[1])}" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe><figcaption>${esc(y[1])}</figcaption></figure>`).join("")}</div></div>`}
+ else if(m.yt)h+=`<div class="pk-sec"><h4>${m.yt.length>1?"Les vidéos":"La vidéo"}</h4><div class="vids">${m.yt.map(y=>`<a href="https://www.youtube.com/watch?v=${y[0]}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-play"/></svg><span>${esc(y[1])}</span><em>YouTube</em></a>`).join("")}</div></div>`;
+ if(m.sites)h+=`<div class="pk-sec"><h4>Voir en ligne</h4><div class="vids">${m.sites.map(s=>`<a href="${s.u}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ext"/></svg><span>${esc(s.t)}</span><em>${esc(s.d)}</em></a>`).join("")}</div></div>`;
+ return h;
+}
+function openPeek(id,fromHash){
+ const m=M.find(x=>x.id===id);if(!m)return;
+ lastFocus=document.activeElement;
+ pkBody.innerHTML=peekHtml(m);
+ document.getElementById("pk-crumb").textContent=m.tid+" · "+m.n;
+ setTimeout(()=>typeInto(document.getElementById("pk-sub"),document.getElementById("pk-sub-c"),m.one,24),260);
+ peek.hidden=false;scrim.hidden=false;
+ requestAnimationFrame(()=>requestAnimationFrame(()=>{peek.classList.add("on");scrim.classList.add("on")}));
+ peek.scrollTop=0;
+ const cv=peek.querySelector(".pk-cover video");if(cv){const pr=cv.play();if(pr&&pr.catch)pr.catch(()=>{})}
+ document.getElementById("pk-close").focus({preventScroll:true});
+ document.documentElement.style.overflow="hidden";
+ if(!fromHash&&location.hash!=="#"+id){try{history.replaceState(null,"","#"+id)}catch(e){}}
+}
+function closePeek(){
+ if(peek.hidden)return;
+ peek.querySelectorAll("video").forEach(v=>v.pause());
+ peek.querySelectorAll("iframe").forEach(f=>f.remove());
+ peek.classList.remove("on");scrim.classList.remove("on");
+ document.documentElement.style.overflow="";
+ setTimeout(()=>{peek.hidden=true;scrim.hidden=true},230);
+ if(M.some(m=>"#"+m.id===location.hash)){try{history.replaceState(null,"",location.pathname+location.search)}catch(e){}}
+ if(lastFocus&&lastFocus.focus)lastFocus.focus({preventScroll:true});
+}
+document.getElementById("pk-close").addEventListener("click",closePeek);
+scrim.addEventListener("click",closePeek);
+/* click a guide page to read it full size; arrows browse the pages of the same guide */
+document.body.insertAdjacentHTML("beforeend",`<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Page du guide" hidden><img id="lb-img" alt=""><button type="button" class="lx" aria-label="Fermer">✕</button><button type="button" class="lp" aria-label="Page précédente">‹</button><button type="button" class="ln2" aria-label="Page suivante">›</button><div class="lc" id="lb-c"></div></div>`);
+const lb=document.getElementById("lb"),lbImg=document.getElementById("lb-img");let lbSet=[],lbI=0;
+function lbShow(){const im=lbSet[lbI];lbImg.src=im.src;lbImg.alt=im.alt;document.getElementById("lb-c").textContent=`${lbI+1} / ${lbSet.length}`;lb.querySelector(".lp").hidden=lbSet.length<2;lb.querySelector(".ln2").hidden=lbSet.length<2}
+function lbOpen(img){lbSet=[...img.closest(".pages,.gd").querySelectorAll("img")];lbI=lbSet.indexOf(img);lbShow();lb.hidden=false;lb.querySelector(".lx").focus({preventScroll:true})}
+function lbClose(){lb.hidden=true}
+function lbStep(d){lbI=(lbI+d+lbSet.length)%lbSet.length;lbShow()}
+pkBody.addEventListener("click",e=>{const im=e.target.closest(".pages img,.gd figure img");if(im)lbOpen(im)});
+lb.addEventListener("click",e=>{if(e.target.closest(".lp"))lbStep(-1);else if(e.target.closest(".ln2"))lbStep(1);else lbClose()});
+document.addEventListener("keydown",e=>{if(!lb.hidden){if(e.key==="Escape")lbClose();else if(e.key==="ArrowLeft")lbStep(-1);else if(e.key==="ArrowRight")lbStep(1);return}if(e.key==="Escape")closePeek()});
+function fromHash(){const id=location.hash.slice(1);if(M.some(m=>m.id===id))openPeek(id,true)}
+window.addEventListener("hashchange",fromHash);fromHash();
+
+typeInto(document.getElementById("pitch"),document.getElementById("pitch-c"),"Je transforme des besoins flous en produits que les équipes adoptent, de la recherche utilisateur à la mesure des résultats.",40);
+/* onboarding checklist */
+const TODO=[
+ {t:"Faire connaissance",d:"30 s",go:()=>window.scrollTo({top:0,behavior:"smooth"})},
+ {t:"Découvrir mon projet phare",d:"1 min 30",go:()=>document.getElementById("projet-phare").scrollIntoView({behavior:"smooth"})},
+ {t:"Parcourir mes produits et projets",d:"1 min",h:"Cliquez sur chaque carte pour voir le détail",go:()=>document.getElementById("h-missions").scrollIntoView({behavior:"smooth"})},
+ {t:"Une question ? Écrivez-moi",d:"30 s",h:"phuongminhngo21@gmail.com",go:()=>document.getElementById("mail").scrollIntoView({behavior:"smooth",block:"center"})},
+ {t:"Planifier un échange",d:"10 s",go:()=>document.getElementById("contact").scrollIntoView({behavior:"smooth"})}
+];
+let done=[];try{done=JSON.parse(localStorage.getItem("pn-onb")||"[]")}catch(e){done=[]}
+const ul=document.getElementById("todo");
+document.body.insertAdjacentHTML("beforeend",`<aside id="onbf" aria-label="Onboarding en cours"><div class="hd"><img class="fface" src="moi-bd.png" alt="" width="46" height="46"><div class="fbub">Vous avez 4 minutes&nbsp;?<span id="onbf-prog"></span></div></div><p class="fint">Je conçois des parcours utilisateur. Celui-ci vous fait découvrir mon travail.</p><ul class="todo" id="todo-f"></ul></aside>`);
+const ulf=document.getElementById("todo-f");
+const items=p=>TODO.map((s,i)=>`<li><input type="checkbox" id="${p}-${i}" data-i="${i}"${done.includes(i)?" checked":""}><button type="button" class="go tgo" data-i="${i}" title="Y aller"><span class="tt">${s.t}</span><span class="dur">${s.d}</span>${s.h?`<span class="hn">${s.h}</span>`:""}</button></li>`).join("");
+ul.innerHTML=items("onb");ulf.innerHTML=items("onbf");
+const FLOATQ=matchMedia("(min-width:1400px) and (hover:hover)");
+let onbPast=false;
+function sync(){document.querySelectorAll(".todo input[data-i]").forEach(c=>{c.checked=done.includes(+c.dataset.i)});const t=done.length?`${done.length}/${TODO.length}`:"";document.getElementById("onb-prog").textContent=t;document.getElementById("onbf-prog").textContent=t;document.documentElement.classList.toggle("onb-float",onbPast&&FLOATQ.matches)}
+function save(){try{localStorage.setItem("pn-onb",JSON.stringify(done))}catch(e){}sync()}
+try{FLOATQ.addEventListener("change",sync)}catch(e){}
+try{new IntersectionObserver(es=>{es.forEach(e=>{onbPast=!e.isIntersecting;sync()})}).observe(document.querySelector(".onb-row"))}catch(e){}
+sync();
+document.querySelectorAll(".todo input[data-i]").forEach(c=>c.addEventListener("change",()=>{const i=+c.dataset.i;done=c.checked?[...new Set([...done,i])]:done.filter(x=>x!==i);save()}));
+document.querySelectorAll(".todo .go").forEach(b=>b.addEventListener("click",()=>TODO[+b.dataset.i].go()));
+document.querySelectorAll(".todo input[data-i]").forEach(c=>c.setAttribute("aria-label","Marquer comme fait : "+TODO[+c.dataset.i].t));
+
+/* copy */
+document.querySelectorAll(".copy").forEach(b=>b.addEventListener("click",()=>{
+ const el=document.getElementById(b.dataset.copy),txt=el.textContent.trim();
+ const ok=()=>{b.textContent="Copié";setTimeout(()=>b.textContent="Copier",1600)};
+ const sel=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r)};
+ try{navigator.clipboard.writeText(txt).then(ok,sel)}catch(e){sel()}
+}));
+</script></body>
+</html>
