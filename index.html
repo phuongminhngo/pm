@@ -8,6 +8,20 @@
 <style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
 </head>
 <body>
+h1.h2x .px{font-family:Silkscreen,monospace}
+h1.h2x .l1,h1.h2x .l2{display:block;position:relative}
+h1.h2x .l1 .sc{font-size:2.7em;line-height:.5;color:var(--sb);margin-right:-.32em;position:relative;z-index:0}
+h1.h2x .l1 .px{position:relative;z-index:1}
+h1.h2x .l2{margin:-.05em 0 0 1.7em}
+h1.h2x .l2 .px{color:var(--rose);font-size:1.15em}
+h1.h2x .l2 .sc{font-size:2em;line-height:.5;margin-left:-.08em}
+h1.h2x .cd{display:block;font-family:Oswald,sans-serif;font-weight:300;font-size:.46em;color:var(--rose);margin:1em 0 0 3.4em;white-space:normal}
+h1.h2x .an{position:absolute;width:0;height:0}h1.h2x .an i{display:block;font-style:normal;font-family:Oswald,sans-serif;font-weight:300;font-size:max(11px,.24em);line-height:1.2;color:var(--fg-2);white-space:nowrap}
+h1.h2x .st{position:absolute;width:.4em;height:.4em}
+.idrow{display:flex;align-items:center;gap:clamp(18px,4vw,36px);margin-top:28px;margin-bottom:18px}.cd2{font-family:Oswald,sans-serif;font-weight:300;font-size:clamp(16px,2vw,19px);line-height:1.3;color:#c95b84;margin:10px 0 18px}.idrow .icon{margin-top:0}.phw{position:relative;flex:none}.idrow{position:relative}.wordbg{flex:1;align-self:stretch;min-width:120px;position:relative;margin:6px 0 0;-webkit-mask-image:linear-gradient(to right,transparent,#000 30%,#000 85%,transparent),linear-gradient(to bottom,transparent,#000 18%,#000 82%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 30%,#000 85%,transparent),linear-gradient(to bottom,transparent,#000 18%,#000 82%,transparent);mask-composite:intersect}.wordbg canvas{position:absolute;inset:0;width:100%;height:100%;display:block}@media (max-width:760px){.wordbg{display:none}}.phw .pst{position:absolute;z-index:2;filter:drop-shadow(0 1px 1px rgba(0,0,0,.06))}.idrow h1.h2x{min-width:0}
+@media (max-width:760px){.idrow{margin-top:16px}}@media (max-width:560px){h1.h2x .an{display:none}}
+</style>
+<meta name="claude:viewport-fit-sides" content="cover">
 <style>
 /* Layout: a single Notion-style page; properties, callout, a missions database with three views, and a peek panel for each mission. */
 :root{
@@ -516,8 +530,8 @@ td.mono{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
 
 <main class="page">
  <div class="narrow">
-  <div class="icon"><img src="profil-3.jpg" alt="Phuong Ngo"></div>
-  <h1>Phuong Ngo</h1>
+  <div class="idrow"><div class="phw"><div class="icon"><img src="profil-3.jpg" alt="Phuong Ngo"></div><svg class="pst" style="left:-12px;top:-10px;width:24px;height:24px" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .8-4.4 4.1 1.1 6L12 16.6 6.7 19.5l1.1-6L3.4 9.4l6-.8z" fill="#8cc6ef" stroke="#8cc6ef" stroke-width="3" stroke-linejoin="round"/></svg><svg class="pst" style="left:-9px;top:52%;width:15px;height:15px" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .8-4.4 4.1 1.1 6L12 16.6 6.7 19.5l1.1-6L3.4 9.4l6-.8z" fill="#f2d46b" stroke="#f2d46b" stroke-width="3" stroke-linejoin="round"/></svg><svg class="pst" style="right:-13px;bottom:-11px;width:26px;height:26px" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .8-4.4 4.1 1.1 6L12 16.6 6.7 19.5l1.1-6L3.4 9.4l6-.8z" fill="#f4a6c0" stroke="#f4a6c0" stroke-width="3" stroke-linejoin="round"/></svg><svg class="pst" style="left:8px;bottom:-9px;width:13px;height:13px" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .8-4.4 4.1 1.1 6L12 16.6 6.7 19.5l1.1-6L3.4 9.4l6-.8z" fill="#f2d46b" stroke="#f2d46b" stroke-width="3" stroke-linejoin="round"/></svg></div>
+  <h1 class="h2x" aria-label="Phuong Ngo"><span class="an" style="left:2.6em;top:-0.12em"><i>(Je suis)</i></span><span class="an" style="left:4.6em;top:0.2em"><i>(PM)</i></span><span class="an" style="left:0em;top:1.68em"><i>(Produit · Projet)</i></span><span class="an" style="left:4.42em;top:1.8em"><i>(FR · EN · VI)</i></span><svg class="st" style="left:-0.5em;top:0.12em" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .8-4.4 4.1 1.1 6L12 16.6 6.7 19.5l1.1-6L3.4 9.4l6-.8z" fill="#f4a6c0" stroke="#f4a6c0" stroke-width="3" stroke-linejoin="round"/></svg><svg class="st" style="left:4.75em;top:1.05em" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .8-4.4 4.1 1.1 6L12 16.6 6.7 19.5l1.1-6L3.4 9.4l6-.8z" fill="#8cc6ef" stroke="#8cc6ef" stroke-width="3" stroke-linejoin="round"/></svg><svg class="st" style="left:4.35em;top:2.4em" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .8-4.4 4.1 1.1 6L12 16.6 6.7 19.5l1.1-6L3.4 9.4l6-.8z" fill="#f2d46b" stroke="#f2d46b" stroke-width="3" stroke-linejoin="round"/></svg><span class="l1"><span class="sc">P</span><span class="px">huong</span></span><span class="l2"><span class="px">N</span><span class="sc">go</span></span></h1><div class="wordbg" aria-hidden="true"><canvas id="word-cv"></canvas></div></div>
   <div class="props">
    <div class="prop"><span class="k"><svg><use href="#i-board"/></svg>Epic</span><span class="v"><button type="button" class="tag rlink Produit" data-cat="Produit">Produits internes →</button><button type="button" class="tag rlink Strategie" data-cat="Strategie">Cas produit et stratégie →</button><button type="button" class="tag rlink Projet" data-cat="Projet">Pilotage de projet →</button></span></div>
    <div class="prop"><span class="k"><svg><use href="#i-dot"/></svg>Disponible</span><span class="v"><span class="tag ok">Septembre 2027</span></span></div>
@@ -934,5 +948,34 @@ document.querySelectorAll(".copy").forEach(b=>b.addEventListener("click",()=>{
  const sel=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r)};
  try{navigator.clipboard.writeText(txt).then(ok,sel)}catch(e){sel()}
 }));
+</script>
+<script>
+(()=>{
+const cv=document.getElementById("word-cv");if(!cv)return;
+const box=cv.parentElement,ctx=cv.getContext("2d");
+const WORDS=["Découvrir","Définir","Développer","Livrer","recherche utilisateur","benchmark","MVP","go-to-market","roadmap","backlog","epic","ticket","sprint","KPI","OKRs","Jira","Notion","Figma","Canva","Slack Workflow","Tally","no-code","parties prenantes","conduite du changement","pitch","prototype","adoption","Google Workspace","FR · EN · VI"];
+const RM=matchMedia("(prefers-reduced-motion: reduce)");
+let W=0,H=0,fs=12,lh=18,cw=7,rows=[],fg="#37352f",raf=0,last=0,vis=true;
+const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const col=()=>{fg=getComputedStyle(document.documentElement).getPropertyValue("--fg").trim()||fg};
+function build(){const b=box.getBoundingClientRect();W=b.width;H=b.height;if(!W||!H)return;const d=Math.min(devicePixelRatio||1,2);
+ cv.width=Math.round(W*d);cv.height=Math.round(H*d);ctx.setTransform(d,0,0,d,0,0);
+ ctx.font=fs+"px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace";ctx.textBaseline="top";cw=ctx.measureText("M").width;
+ rows=[];const n=Math.ceil(H/lh)+1;for(let i=0;i<n;i++){let t="";while(t.length<300)t+=shuf(WORDS).join("  ·  ")+"  ·  ";rows.push({t,off:Math.random()*t.length*cw,sp:(5+Math.random()*7)*(i%2?-1:1)})}
+ col()}
+function draw(dt){if(!W)return;ctx.clearRect(0,0,W,H);ctx.fillStyle=fg;ctx.globalAlpha=.2;const n=Math.ceil(W/cw)+2;
+ rows.forEach((r,y)=>{r.off+=r.sp*dt;const L=r.t.length*cw;r.off=((r.off%L)+L)%L;const f=Math.floor(r.off/cw),sub=r.off-f*cw;
+  for(let i=0;i<n;i++){const ch=r.t[(f+i)%r.t.length];if(ch!==" ")ctx.fillText(ch,i*cw-sub,y*lh+2)}});ctx.globalAlpha=1}
+function loop(t){raf=0;const dt=last?Math.min((t-last)/1000,.1):0;last=t;draw(dt);go()}
+function go(){if(!raf&&vis&&!document.hidden&&!RM.matches)raf=requestAnimationFrame(loop)}
+function stop(){if(raf)cancelAnimationFrame(raf);raf=0;last=0}
+function refresh(){stop();build();draw(0);go()}
+new ResizeObserver(refresh).observe(box);
+new IntersectionObserver(e=>{vis=e[0].isIntersecting;vis?go():stop()}).observe(box);
+document.addEventListener("visibilitychange",()=>document.hidden?stop():go());
+RM.addEventListener("change",refresh);
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>{col();draw(0)});
+new MutationObserver(()=>{col();draw(0)}).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+})();
 </script></body>
 </html>
